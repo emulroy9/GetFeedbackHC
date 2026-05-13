@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GetFeedback Digital Help Centre</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .password-gate {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      padding: 40px;
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+    }
+
+    .password-gate h1 {
+      margin: 0 0 10px 0;
+      color: #333;
+      font-size: 28px;
+    }
+
+    .password-gate p {
+      color: #666;
+      margin: 0 0 30px 0;
+      font-size: 14px;
+    }
+
+    .password-input-group {
+      margin-bottom: 20px;
+    }
+
+    .password-input-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      box-sizing: border-box;
+      transition: border-color 0.3s;
+    }
+
+    .password-input-group input:focus {
+      outline: none;
+      border-color: #667eea;
+      box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    }
+
+    .password-button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .password-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+    }
+
+    .password-button:active {
+      transform: translateY(0);
+    }
+
+    .password-error {
+      display: none;
+      color: #e74c3c;
+      font-size: 13px;
+      margin-top: 12px;
+      padding: 10px;
+      background: #fadbd8;
+      border-radius: 4px;
+      text-align: left;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="password-gate" id="passwordGate">
+    <h1>GetFeedback Digital Help Centre</h1>
+    <p>This help centre is password-protected. Please enter the password to continue.</p>
+    <div class="password-input-group">
+      <input type="password" id="passwordInput" placeholder="Enter password" />
+    </div>
+    <button class="password-button" onclick="checkPassword()">Access Help Centre</button>
+    <div class="password-error" id="passwordError">Incorrect password. Please try again.</div>
+  </div>
+
+  <div id="content" class="hidden"></div>
+
+  <script>
+    // Set your password here (change before deploying!)
+    const CORRECT_PASSWORD = 'usabilla2026';
+    const STORAGE_KEY = 'help_centre_authenticated';
+
+    function checkPassword() {
+      const inputPassword = document.getElementById('passwordInput').value;
+      const errorDiv = document.getElementById('passwordError');
+
+      if (inputPassword === CORRECT_PASSWORD) {
+        errorDiv.style.display = 'none';
+        sessionStorage.setItem(STORAGE_KEY, 'true');
+        loadHelpCentre();
+      } else {
+        errorDiv.style.display = 'block';
+        document.getElementById('passwordInput').value = '';
+      }
+    }
+
+    function loadHelpCentre() {
+      const gate = document.getElementById('passwordGate');
+      const content = document.getElementById('content');
+      
+      gate.style.display = 'none';
+      
+      // Fetch the main help centre page
+      fetch('help-centre.html')
+        .then(response => response.text())
+        .then(html => {
+          content.innerHTML = html;
+          content.classList.remove('hidden');
+        })
+        .catch(error => {
+          console.error('Error loading help centre:', error);
+          content.innerHTML = '<p>Error loading help centre. Please refresh the page.</p>';
+          content.classList.remove('hidden');
+        });
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+        checkPassword();
+      }
+    }
+
+    document.getElementById('passwordInput').addEventListener('keypress', handleKeyPress);
+
+    // Check if already authenticated this session
+    if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
+      loadHelpCentre();
+    } else {
+      document.getElementById('passwordInput').focus();
+    }
+  </script>
+</body>
+</html>
