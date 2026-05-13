@@ -121,31 +121,11 @@
       if (inputPassword === CORRECT_PASSWORD) {
         errorDiv.style.display = 'none';
         sessionStorage.setItem(STORAGE_KEY, 'true');
-        loadHelpCentre();
+        window.location.href = 'help-centre.html';
       } else {
         errorDiv.style.display = 'block';
         document.getElementById('passwordInput').value = '';
       }
-    }
-
-    function loadHelpCentre() {
-      const gate = document.getElementById('passwordGate');
-      const content = document.getElementById('content');
-      
-      gate.style.display = 'none';
-      
-      // Fetch the main help centre page
-      fetch('help-centre.html')
-        .then(response => response.text())
-        .then(html => {
-          content.innerHTML = html;
-          content.classList.remove('hidden');
-        })
-        .catch(error => {
-          console.error('Error loading help centre:', error);
-          content.innerHTML = '<p>Error loading help centre. Please refresh the page.</p>';
-          content.classList.remove('hidden');
-        });
     }
 
     function handleKeyPress(event) {
@@ -156,9 +136,9 @@
 
     document.getElementById('passwordInput').addEventListener('keypress', handleKeyPress);
 
-    // Check if already authenticated this session
+    // Redirect immediately if already authenticated this session
     if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
-      loadHelpCentre();
+      window.location.href = 'help-centre.html';
     } else {
       document.getElementById('passwordInput').focus();
     }
