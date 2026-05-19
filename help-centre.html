@@ -20,25 +20,35 @@
         <input type="text" placeholder="Search help articles...">
       </div>
       <div class="nav-links">
-        <a href="index.html">Help Centre</a>
-        <a href="#">Documentation</a>
-        <a href="#">Support</a>
+        <a href="#">Home</a>
+        <a href="#">My Team</a>
+        <a href="#">Plans & Pricing</a>
+        <a href="#">Multi-survey Analysis</a>
       </div>
     </div>
   </header>
 
   <div class="hero">
-    <h1>GetFeedback Digital Help Centre</h1>
-    <p>Find answers, explore guides, and learn how to make the most of GetFeedback Digital.</p>
-    <div class="search-hero">
-      <input type="text" placeholder="Search articles...">
+    <h1>Help Center</h1>
+    <div class="hero-tabs">
+      <span>SurveyMonkey Help</span>
+      <span>Wufoo Help</span>
+      <span class="active-tab">GetFeedback Help</span>
+      <span>GetFeedback Enterprise Help</span>
+      <span>Apply Help</span>
     </div>
+  </div>
+
+  <div class="help-breadcrumb">
+    <span>Help</span>
+    <span class="breadcrumb-separator">/</span>
+    <strong>Survey channels</strong>
   </div>
 
   <div class="homepage-layout">
     <aside class="homepage-sidebar">
       <details class="sidebar-dropdown" open>
-        <summary>All Articles</summary>
+        <summary>GetFeedback Topics</summary>
         <ul class="sidebar-links">
           <li><a href="help/sign-up-onboarding.html">Sign Up & Onboarding</a></li>
           <li><a href="help/getting-started.html">Getting Started</a></li>
@@ -55,73 +65,23 @@
       </details>
     </aside>
 
-    <section class="homepage-main">
-      <h2>Getting Started</h2>
-    <div class="article-card-grid">
-      <a href="help/sign-up-onboarding.html" class="article-card">
-        <span class="article-icon">👥</span>
-        <h3>Sign Up & Onboarding</h3>
-        <p>Create your account, log in, and invite your team members to GetFeedback Digital.</p>
-      </a>
-      <a href="help/getting-started.html" class="article-card">
-        <span class="article-icon">🚀</span>
-        <h3>Getting Started</h3>
-        <p>Explore your dashboard and understand the three types of feedback collection.</p>
-      </a>
-      <a href="help/implementation.html" class="article-card">
-        <span class="article-icon">⚙️</span>
-        <h3>Installation & Implementation</h3>
-        <p>Install the GetFeedback code snippet on your website manually or via GTM.</p>
-      </a>
-    </div>
+    <main class="homepage-main">
+      <div class="page-intro">
+        <p>Here is the GetFeedback Help center demo. This layout shows how the articles and survey channels will appear inside your help experience.</p>
+      </div>
 
-    <h2 style="margin-top: 50px;">Feedback Channels</h2>
-    <div class="article-card-grid">
-      <a href="help/feedback-button.html" class="article-card">
-        <span class="article-icon">🔘</span>
-        <h3>Feedback Button</h3>
-        <p>Set up an always-on floating feedback button for continuous visitor insights.</p>
-      </a>
-      <a href="help/web-campaigns.html" class="article-card">
-        <span class="article-icon">🎯</span>
-        <h3>Trigger-based Forms</h3>
-        <p>Create behavior-triggered forms that appear at the perfect moment.</p>
-      </a>
-      <a href="help/embedded-survey.html" class="article-card">
-        <span class="article-icon">📋</span>
-        <h3>Embedded Forms</h3>
-        <p>Place feedback forms directly into your page content for seamless collection.</p>
-      </a>
-    </div>
-
-    <h2 style="margin-top: 50px;">Analysis & Management</h2>
-    <div class="article-card-grid">
-      <a href="help/analyse-results.html" class="article-card">
-        <span class="article-icon">📊</span>
-        <h3>Analyse Your Results</h3>
-        <p>View trends, filter data, and export feedback for deeper insights.</p>
-      </a>
-      <a href="help/team-management.html" class="article-card">
-        <span class="article-icon">👨‍💼</span>
-        <h3>Team Management</h3>
-        <p>Manage team members, roles, seats, and access permissions.</p>
-      </a>
-    </div>
-
-    <h2 style="margin-top: 50px;">Advanced Configuration</h2>
-    <div class="article-card-grid">
-      <a href="help/custom-variables.html" class="article-card">
-        <span class="article-icon">📌</span>
-        <h3>Custom Variables</h3>
-        <p>Enrich feedback with metadata like user tier, account ID, and session information.</p>
-      </a>
-      <a href="help/csp-configuration.html" class="article-card">
-        <span class="article-icon">🔒</span>
-        <h3>CSP Configuration</h3>
-        <p>Configure Content Security Policy for secure GetFeedback integration.</p>
-      </a>
-    </div>
-  </section>
+      <section class="content-panel">
+        <h2>Survey Channels</h2>
+        <details class="content-dropdown" open>
+          <summary>Website</summary>
+          <div class="content-links">
+            <a href="help/feedback-button.html">Feedback Button</a>
+            <a href="help/web-campaigns.html">Trigger-based Forms</a>
+            <a href="help/embedded-survey.html">Embedded Forms</a>
+          </div>
+        </details>
+      </section>
+    </main>
   </div>
 
   <footer class="footer">
