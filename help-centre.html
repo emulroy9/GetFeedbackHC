@@ -15,29 +15,38 @@
 <body>
   <header>
     <div class="header-container">
-      <a href="index.html" class="logo">GetFeedback Digital</a>
-      <div class="search-box">
-        <input type="text" placeholder="Search help articles...">
-      </div>
-      <div class="nav-links">
+      <a href="index.html" class="logo">GetFeedback</a>
+      <nav class="header-nav">
         <a href="#">Home</a>
         <a href="#">My Team</a>
         <a href="#">Plans & Pricing</a>
         <a href="#">Multi-survey Analysis</a>
+      </nav>
+      <div class="header-actions">
+        <button class="btn-primary">Create survey</button>
+        <button class="notification-btn" aria-label="Notifications">9</button>
+        <div class="avatar">EM</div>
       </div>
     </div>
   </header>
 
-  <div class="hero">
-    <h1>Help Center</h1>
-    <div class="hero-tabs">
-      <span>SurveyMonkey Help</span>
-      <span>Wufoo Help</span>
-      <span class="active-tab">GetFeedback Help</span>
-      <span>GetFeedback Enterprise Help</span>
-      <span>Apply Help</span>
+  <section class="hero-block">
+    <div class="hero-top">
+      <div>
+        <h1>Help Center</h1>
+        <div class="hero-tabs">
+          <span>SurveyMonkey Help</span>
+          <span>Wufoo Help</span>
+          <span class="active-tab">GetFeedback Help</span>
+          <span>GetFeedback Enterprise Help</span>
+          <span>Apply Help</span>
+        </div>
+      </div>
+      <div class="hero-search">
+        <input type="text" placeholder="Search help articles...">
+      </div>
     </div>
-  </div>
+  </section>
 
   <div class="help-breadcrumb">
     <span>Help</span>
@@ -47,32 +56,53 @@
 
   <div class="homepage-layout">
     <aside class="homepage-sidebar">
-      <details class="sidebar-dropdown" open>
-        <summary>GetFeedback Topics</summary>
-        <ul class="sidebar-links">
-          <li><a href="help/sign-up-onboarding.html">Sign Up & Onboarding</a></li>
-          <li><a href="help/getting-started.html">Getting Started</a></li>
-          <li><a href="help/implementation.html">Installation & Implementation</a></li>
-          <li><a href="help/feedback-button.html">Feedback Button</a></li>
-          <li><a href="help/web-campaigns.html">Trigger-based Forms</a></li>
-          <li><a href="help/web-campaigns-targeting.html">Web Campaigns Targeting</a></li>
-          <li><a href="help/embedded-survey.html">Embedded Forms</a></li>
-          <li><a href="help/analyse-results.html">Analyse Your Results</a></li>
-          <li><a href="help/team-management.html">Team Management</a></li>
-          <li><a href="help/custom-variables.html">Custom Variables</a></li>
-          <li><a href="help/csp-configuration.html">CSP Configuration</a></li>
-        </ul>
-      </details>
+      <div class="sidebar-title">
+        <span class="sidebar-icon">GF</span>
+        GetFeedback Topics
+      </div>
+      <nav class="sidebar-links">
+        <a href="#" class="active">Survey Channels</a>
+        <a href="help/sign-up-onboarding.html">Sign Up & Onboarding</a>
+        <a href="help/getting-started.html">Getting Started</a>
+        <a href="help/implementation.html">Installation & Implementation</a>
+        <a href="help/feedback-button.html">Feedback Button</a>
+        <a href="help/web-campaigns.html">Trigger-based Forms</a>
+        <a href="help/web-campaigns-targeting.html">Web Campaigns Targeting</a>
+        <a href="help/embedded-survey.html">Embedded Forms</a>
+        <a href="help/analyse-results.html">Analyse Your Results</a>
+        <a href="help/team-management.html">Team Management</a>
+        <a href="help/custom-variables.html">Custom Variables</a>
+        <a href="help/csp-configuration.html">CSP Configuration</a>
+      </nav>
     </aside>
 
     <main class="homepage-main">
-      <div class="page-intro">
-        <p>Here is the GetFeedback Help center demo. This layout shows how the articles and survey channels will appear inside your help experience.</p>
+      <div class="page-heading">
+        <div class="breadcrumbs-small">
+          <span>Help</span>
+          <span class="breadcrumb-separator">/</span>
+          <strong>Survey channels</strong>
+        </div>
+        <h1>Survey channels</h1>
       </div>
 
-      <section class="content-panel">
-        <h2>Survey Channels</h2>
-        <details class="content-dropdown" open>
+      <div class="accordion-list">
+        <details class="accordion-item">
+          <summary>API</summary>
+        </details>
+        <details class="accordion-item">
+          <summary>Chat</summary>
+        </details>
+        <details class="accordion-item">
+          <summary>Email</summary>
+        </details>
+        <details class="accordion-item">
+          <summary>Mobile App</summary>
+        </details>
+        <details class="accordion-item">
+          <summary>SMS</summary>
+        </details>
+        <details class="accordion-item" open>
           <summary>Website</summary>
           <div class="content-links">
             <a href="help/feedback-button.html">Feedback Button</a>
@@ -80,7 +110,7 @@
             <a href="help/embedded-survey.html">Embedded Forms</a>
           </div>
         </details>
-      </section>
+      </div>
     </main>
   </div>
 
