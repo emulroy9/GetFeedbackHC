@@ -834,6 +834,10 @@ td {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 22px;
 }
+/* Red highlight and floating comment styles used by password article */
+.highlight-red { background: #fff5f5; border-left: 4px solid #f87171; padding: 12px; border-radius: 8px; color: #7f1d1d; margin: 12px 0; }
+.red-note { color: #d63447; font-weight: 700; }
+.float-comment { display: inline-block; background: #fee2e2; color: #b91c1c; padding: 6px 10px; border-radius: 8px; margin-left: 8px; font-size: 0.95rem; }
 
 .article-card {
   background: white;
