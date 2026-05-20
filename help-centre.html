@@ -67,18 +67,47 @@
         GetFeedback Topics
       </div>
       <nav class="sidebar-links">
-        <a href="#" class="active">Survey Channels</a>
-        <a href="help/sign-up-onboarding.html">Sign Up & Onboarding</a>
-        <a href="help/getting-started.html">Getting Started</a>
-        <a href="help/implementation.html">Installation & Implementation</a>
-        <a href="help/feedback-button.html">Feedback Button</a>
-        <a href="help/web-campaigns.html">Trigger-based Forms</a>
-        <a href="help/web-campaigns-targeting.html">Web Campaigns Targeting</a>
-        <a href="help/embedded-survey.html">Embedded Forms</a>
-        <a href="help/analyse-results.html">Analyse Your Results</a>
-        <a href="help/team-management.html">Team Management</a>
-        <a href="help/custom-variables.html">Custom Variables</a>
-        <a href="help/csp-configuration.html">CSP Configuration</a>
+        <!-- Survey Channels -->
+        <details class="sidebar-dropdown" open>
+          <summary><a href="#" class="dropdown-title">Survey Channels</a></summary>
+          <ul>
+            <li><a href="help/feedback-button.html">Feedback Button</a></li>
+            <li>
+              <details class="sidebar-dropdown-nested" open>
+                <summary><a href="help/web-campaigns.html" class="dropdown-title">Trigger-based Forms</a></summary>
+                <ul>
+                  <li><a href="help/web-campaigns-targeting.html">Web Campaigns Targeting</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="help/embedded-survey.html">Embedded Forms</a></li>
+          </ul>
+        </details>
+
+        <!-- Getting Started -->
+        <details class="sidebar-dropdown">
+          <summary><a href="help/getting-started.html" class="dropdown-title">Getting Started</a></summary>
+          <ul>
+            <li>
+              <details class="sidebar-dropdown-nested">
+                <summary><a href="help/implementation.html" class="dropdown-title">Installation & Implementation</a></summary>
+                <ul>
+                  <li><a href="help/custom-variables.html">Custom Variables</a></li>
+                  <li><a href="help/csp-configuration.html">CSP Configuration</a></li>
+                </ul>
+              </details>
+            </li>
+            <li><a href="help/analyse-results.html">Analyse Your Results</a></li>
+          </ul>
+        </details>
+
+        <!-- Sign Up & Onboarding -->
+        <details class="sidebar-dropdown">
+          <summary><a href="help/sign-up-onboarding.html" class="dropdown-title">Sign Up & Onboarding</a></summary>
+          <ul>
+            <li><a href="help/team-management.html">Team Management</a></li>
+          </ul>
+        </details>
       </nav>
     </aside>
 

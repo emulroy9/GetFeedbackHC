@@ -8,6 +8,21 @@ if (sidebarLinks.length) {
       link.classList.add('active');
     }
   });
+  
+  // For the sidebar, match .html files
+  sidebarLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.endsWith(currentPath)) {
+      link.classList.add('active');
+      
+      // Open parent details elements
+      let parent = link.closest('details');
+      while (parent) {
+        parent.setAttribute('open', '');
+        parent = parent.parentElement.closest('details');
+      }
+    }
+  });
 }
 
 const navLinks = document.querySelectorAll('.nav-links a');
