@@ -106,9 +106,9 @@ function hideSuggestions(searchContainer) {
 }
 
 // Attach search functionality to all search inputs
-const searchInputs = document.querySelectorAll('.search-box input, .search-hero input');
+const searchInputs = document.querySelectorAll('.search-box input, .search-hero input, .page-search input');
 searchInputs.forEach(input => {
-  const searchContainer = input.closest('.search-box') || input.closest('.search-hero');
+  const searchContainer = input.closest('.search-box') || input.closest('.search-hero') || input.closest('.page-search');
   
   input.addEventListener('input', (e) => {
     const query = input.value;
