@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GetFeedback Digital Help Centre</title>
+  <title>GetFeedback Help Center</title>
   <style>
     body {
       margin: 0;
@@ -98,12 +98,12 @@
 </head>
 <body>
   <div class="password-gate" id="passwordGate">
-    <h1>GetFeedback Digital Help Centre</h1>
-    <p>This help centre is password-protected. Please enter the password to continue.</p>
+    <h1>GetFeedback Help Center</h1>
+    <p>This help center is password-protected. Please enter the password to continue.</p>
     <div class="password-input-group">
       <input type="password" id="passwordInput" placeholder="Enter password" />
     </div>
-    <button class="password-button" onclick="checkPassword()">Access Help Centre</button>
+    <button class="password-button" onclick="checkPassword()">Access Help Center</button>
     <div class="password-error" id="passwordError">Incorrect password. Please try again.</div>
   </div>
 
@@ -112,7 +112,7 @@
   <script>
     // Set your password here (change before deploying!)
     const CORRECT_PASSWORD = 'usabilla2026';
-    const STORAGE_KEY = 'help_centre_authenticated';
+    const STORAGE_KEY = 'help_center_authenticated';
 
     function checkPassword() {
       const inputPassword = document.getElementById('passwordInput').value;
@@ -121,7 +121,7 @@
       if (inputPassword === CORRECT_PASSWORD) {
         errorDiv.style.display = 'none';
         sessionStorage.setItem(STORAGE_KEY, 'true');
-        window.location.href = 'help-centre.html';
+        window.location.href = 'help-center.html';
       } else {
         errorDiv.style.display = 'block';
         document.getElementById('passwordInput').value = '';
@@ -138,7 +138,7 @@
 
     // Redirect immediately if already authenticated this session
     if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
-      window.location.href = 'help-centre.html';
+      window.location.href = 'help-center.html';
     } else {
       document.getElementById('passwordInput').focus();
     }
