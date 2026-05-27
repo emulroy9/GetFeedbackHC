@@ -79,9 +79,7 @@ function showSuggestions(searchContainer, results) {
     return;
   }
   
-  // Determine base path for links
   const isArticlePage = window.location.pathname.includes('/help/');
-  const basePath = isArticlePage ? '../' : '';
   
   const suggestionsDiv = document.createElement('div');
   suggestionsDiv.className = 'search-suggestions';
@@ -89,7 +87,7 @@ function showSuggestions(searchContainer, results) {
   results.forEach(result => {
     const link = document.createElement('a');
     const adjustedUrl = isArticlePage ? result.url.replace('help/', '') : result.url;
-    link.href = basePath + adjustedUrl;
+    link.href = adjustedUrl;
     link.className = 'search-suggestion-item';
     link.innerHTML = `<span class="search-suggestion-title">${result.title}</span><span class="search-suggestion-url">${result.url}</span>`;
     suggestionsDiv.appendChild(link);
@@ -126,9 +124,8 @@ searchInputs.forEach(input => {
       const results = performSearch(input.value);
       if (results.length > 0) {
         const isArticlePage = window.location.pathname.includes('/help/');
-        const basePath = isArticlePage ? '../' : '';
         const adjustedUrl = isArticlePage ? results[0].url.replace('help/', '') : results[0].url;
-        window.location.href = basePath + adjustedUrl;
+        window.location.href = adjustedUrl;
       }
     }
   });
