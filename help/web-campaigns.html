@@ -32,46 +32,53 @@
       <p class="article-intro">Trigger-based forms are behavior-based forms that appear automatically when a visitor meets specific criteria. Unlike the standard "Always-on" Feedback Button, these forms are standalone and do not require a visible button to exist on the page.</p>
 
       <h2 id="survey-type">1. Choosing Your Survey Type</h2>
-      <p>To begin, navigate to <strong>Trigger-based Forms</strong> in the dashboard. Select the format you want first (click the <strong>Slide-out</strong> or <strong>Full-screen</strong> tile), then click <strong>Create</strong> (or Continue) to open the builder.</p>
+      <p>To begin, navigate to <strong>Trigger-based Forms</strong> in the dashboard, and then click <strong>Create</strong>. Select the format you want first (click the <strong>Slide-out</strong> or <strong>Full-screen</strong> tile), and then <strong>Continue</strong> to open the builder.</p>
       <ul>
         <li><strong>Slide-out Survey:</strong> A subtle widget that slides in from the edge of the screen—good for quick check-ins without interrupting the user journey.</li>
-        <li><strong>Full-screen Survey:</strong> A high-impact modal that overlays the page. Full-screen surveys can also be accessed via their own direct URL (visible in the campaign overview), useful for linking in emails or support content.</li>
+        <li><strong>Full-screen Survey:</strong> A high-impact modal that overlays the page. Full-screen surveys can also be accessed via their own direct URL (visible in the Trigger-based Form overview), useful for linking in emails or support content.</li>
       </ul>
 
-      <h2 id="building">2. Building the Survey (The Builder)</h2>
-      <p>The builder is divided into Start Page, Form Page (for multi-page flows), and End Page.</p>
+      <h2 id="building">2. Building the Form</h2>
+      <p>Once you open the <strong>Build form</strong> view, you will be presented with a dynamic multi-page editor. Use the question sidebar menu on the left to add your chosen components directly onto your active page canvas.</p>
 
-      <h3>Page Management & Logic</h3>
+      <h3>The Multi-Page Tab Layout</h3>
+      <p>The builder uses sequential tabs located at the top of the workspace to segment the user flow. The page types are outlined below:</p>
       <ul>
-        <li><strong>Multi-Page Flows:</strong> Click the + icon next to the page tabs to add additional form pages. You can rename or delete pages by clicking the three-dot menu on the tab.</li>
-        <li><strong>Page Logic (Branching):</strong> Click <strong>Edit Settings</strong> on any page tab to configure conditional jumps. This allows you to skip pages or "jump" a user to the End Page based on their specific answers.</li>
-        <li><strong>Discard Guard:</strong> If you try to exit the builder without saving, a "Discard Form" warning will appear to prevent accidental data loss.</li>
+        <li><strong>The Start Page:</strong> The introductory experience for your users. Unlike other structures, Trigger-Based Forms do not force a specific mandated question type here—giving you total structural freedom right from the outset.</li>
+        <li><strong>Intermediary Pages:</strong> Custom pages used to dive deeper into follow-up topics. You can add brand new pages into the flow by clicking the <strong>+ (plus)</strong> icon next to the tabs.</li>
+        <li><strong>The End Page:</strong> The final validation interface. When navigating to the End page, the question toolkit automatically limits available options strictly to <strong>Format</strong> elements (Header and Paragraph) and Advanced Settings, letting you construct a streamlined thank-you screen.</li>
       </ul>
 
-      <h3>Adding Content</h3>
-      <p>Drag elements from the sidebar to the preview area:</p>
+      <h3>Adding Content and Question Types</h3>
+      <p>Build your survey fields using the <strong>Add questions</strong> menu located on the left side of the dashboard. Click on any item to drop it directly into your active page layout:</p>
       <ul>
-        <li><strong>Feedback elements:</strong> NPS, Rating, and Mood (emoji scales).</li>
-        <li><strong>Input elements:</strong> Text Area, Input Text, and Email.</li>
-        <li><strong>Choice elements:</strong> Dropdowns, Checkboxes, and Radio Buttons.</li>
-        <li><strong>Formatting:</strong> Use Headers and Paragraphs to provide context or instructions.</li>
+        <li><strong>Feedback:</strong> Select from <strong>NPS</strong>, <strong>Rating</strong>, or <strong>Mood</strong> (interactive emoji blocks).</li>
+        <li><strong>Input:</strong> Capture user data using standard text input fields, descriptive <strong>Text area</strong> components, or designated <strong>Email</strong> blocks.</li>
+        <li><strong>Choice:</strong> Provide guided inputs via structured <strong>Drop down</strong> selection elements, multiple-choice <strong>Checkbox</strong> controls, or single-select <strong>Radio buttons</strong>.</li>
+        <li><strong>Format:</strong> Organize your content sections clearly using contextual <strong>Header</strong> text blocks and explanatory <strong>Paragraph</strong> blocks.</li>
+        <li><strong>Advanced Settings:</strong> Manage back-end submission details directly below the question menu with options to toggle <strong>Store IP address</strong> and <strong>Store user location</strong> collecting features.</li>
       </ul>
+
+<h3>Page Logic and Control Visibility</h3>
+      <p>Page logic is used to jump to specific pages depending on the answers given in the current page. Control visibility is used to shows questions on the same page based on the answer to a previous question. Page logic is accessed by clicking the 3 dots next to the page title and clicking edit, from here you can "Add Rule" in the page logic section. For control visibility you need to hover over a question and click the cog, you will see the control visibility options along the bottom. Note you cant used control visibility on the start or end pages</p>
+
 
       <h2 id="targeting">3. Targeting: Defining the "Who" and "Where"</h2>
-      <p>For detailed targeting options, see our <a href="web-campaigns-targeting.html">Web Survey Targeting guide</a>. Targeting rules work as "AND" conditions—a visitor must meet all enabled criteria for the survey to trigger.</p>
+      <p>Once your form is complete you will be brought to the <Strong>Launch</Strong> page. Here you can choose to <strong>Show your form to all visitors on every page</strong>, or set your custom <strong>Targeting</strong> options within the <strong>Show your form to certain visitors</strong> option. For detailed targeting options, see our <a href="web-campaigns-targeting.html">Web Survey Targeting guide</a>. Targeting rules work as "AND" conditions—a visitor must meet all enabled criteria for the survey to trigger.</p>
 
       <h2 id="scheduling">4. Scheduling & Fatigue Management</h2>
-      <p>Control the campaign lifecycle via the Schedule tab:</p>
+      <p>Within <Strong>Launch</Strong> the next option you will see is <Strong>Schedule</Strong>. This allows you to control the campaign lifecycle:</p>
       <ul>
         <li><strong>Activation:</strong> Choose to activate immediately, schedule a future start date, or save the campaign as "Off" to be toggled manually later.</li>
         <li><strong>Deactivation:</strong> Automatically stop the campaign on a specific date or after a certain number of responses (e.g., stop after 500 entries).</li>
         <li><strong>Reset Campaign:</strong> Define how often a user should see the survey again (e.g., every 30 days).</li>
-        <li><strong>"Do Not Bother":</strong> Uses Local Storage to ensure a visitor only sees the survey once until the next reset. This persists even if the user closes the tab, but will be cleared if they wipe their browser cache.</li>
+        <li><strong>"Do Not Bother":</strong> By default our Trigger-Based Forms do not show again once they have been interacted with, however, this option uses Local Storage to ensure a visitor only sees the survey once until the next reset, whether they have interacted with it or not. This persists even if the user closes the tab, but will be cleared if they wipe their browser cache.</li>
       </ul>
 
       <h2 id="installation">5. Installation</h2>
+      <p>Once you have saved your form and options you will be brought to the <strong>Install</strong> page. Here you can find the installation instructions for you form:</p>
       <ul>
-        <li><strong>The Snippet:</strong> Copy the unique JavaScript code and paste it into the global footer of your website.</li>
+        <li><strong>The Snippet:</strong> Copy the unique JavaScript code and paste it into the global footer of your website. You will only need to install this on your site once, and it will allow the triggering of all of your Campaigns across your site.</li>
         <li><strong>CSP (Content Security Policy):</strong> If your site is highly secure, use the <strong>Include CSP Hash</strong> option in the Install tab to get the specific hashes required for your script-src and style-src headers. Learn more in our <a href="csp-configuration.html">CSP Configuration guide</a>.</li>
         <li><strong>Full-Page URL:</strong> If using the Full-screen format, you will also be provided with a direct Survey URL. This can be used as a standalone link in marketing emails or support signatures.</li>
       </ul>
@@ -116,8 +123,6 @@
     &copy; 2026 GetFeedback. All rights reserved.
   </footer>
   <script src="../assets/script.js"></script>
-  <!-- begin usabilla live embed code -->
   <script type="text/javascript">window.lightningjs||function(n){var e="lightningjs";function t(e,t){var r,i,a,o,d,c;return t&&(t+=(/\?/.test(t)?"&":"?")+"lv=1"),n[e]||(r=window,i=document,a=e,o=i.location.protocol,d="load",c=0,function(){n[a]=function(){var t=arguments,i=this,o=++c,d=i&&i!=r&&i.id||0;function s(){return s.id=o,n[a].apply(s,arguments)}return(e.s=e.s||[]).push([o,d,t]),s.then=function(n,t,r){var i=e.fh[o]=e.fh[o]||[],a=e.eh[o]=e.eh[o]||[],d=e.ph[o]=e.ph[o]||[];return n&&i.push(n),t&&a.push(t),r&&d.push(r),s},s};var e=n[a]._={};function s(){e.P(d),e.w=1,n[a]("_load")}e.fh={},e.eh={},e.ph={},e.l=t?t.replace(/^\/\//,("https:"==o?o:"http:")+"//"):t,e.p={0:+new Date},e.P=function(n){e.p[n]=new Date-e.p[0]},e.w&&s(),r.addEventListener?r.addEventListener(d,s,!1):r.attachEvent("onload",s);var l=function(){function n(){return["<!DOCTYPE ",o,"><",o,"><head></head><",t,"><",r,' src="',e.l,'"></',r,"></",t,"></",o,">"].join("")}var t="body",r="script",o="html",d=i[t];if(!d)return setTimeout(l,100);e.P(1);var c,s=i.createElement("div"),h=s.appendChild(i.createElement("div")),u=i.createElement("iframe");s.style.display="none",d.insertBefore(s,d.firstChild).id="lightningjs-"+a,u.frameBorder="0",u.id="lightningjs-frame-"+a,/MSIE[ ]+6/.test(navigator.userAgent)&&(u.src="javascript:false"),u.allowTransparency="true",h.appendChild(u);try{u.contentWindow.document.open()}catch(n){e.domain=i.domain,c="javascript:var d=document.open();d.domain='"+i.domain+"';",u.src=c+"void(0);"}try{var p=u.contentWindow.document;p.write(n()),p.close()}catch(e){u.src=c+'d.write("'+n().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}e.P(2)};e.l&&l()}()),n[e].lv="1",n[e]}var r=window.lightningjs=t(e);r.require=t,r.modules=n}({});window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/3a0c5bba3e9c.js");</script>
-  <!-- end usabilla live embed code -->
-</body>
+  </body>
 </html>
