@@ -27,35 +27,59 @@
 
   <div class="main-wrapper">
     <main class="main-content">
-      <div class="article-meta">Last updated: May 12, 2026</div>
+      <div class="article-meta">Last updated: May 27, 2026</div>
       <h1>Configuring Content Security Policy (CSP) for GetFeedback</h1>
-      <p class="article-intro">As security and privacy become top priorities, many organizations use a Content Security Policy (CSP) to reduce the risk of XSS (Cross-Site Scripting) attacks. A CSP header tells the browser which dynamic resources (such as JavaScript, Stylesheets, and Images) are allowed to load. If your website uses a strict CSP, you may need to add GetFeedback to your "allowlist" to ensure your feedback buttons and surveys load and function correctly.</p>
+      <p class="article-intro">As security and privacy become top priorities, many organizations use a Content Security Policy (CSP) to reduce the risk of XSS (Cross-Site Scripting) attacks and data injection vulnerabilities. A CSP header tells the browser which dynamic resources (such as JavaScript, Stylesheets, and Images) are allowed to execute. If your website uses a strict CSP, you must add GetFeedback to your "allowlist" to ensure your feedback assets load properly.</p>
 
-      <h2 id="checking-csp">Checking for CSP Issues</h2>
-      <p>If you have installed the GetFeedback snippet but your feedback button isn't appearing, or the form looks unstyled, you may have a CSP conflict.</p>
-      <p>To verify this:</p>
-      <ol>
-        <li>Open your website in <strong>Google Chrome</strong>.</li>
-        <li>Right-click anywhere on the page and select <strong>Inspect</strong>, then click the <strong>Console</strong> tab.</li>
-        <li>Look for red error messages. A CSP error will typically state that a resource failed to load because it "violates the following Content Security Policy directive."</li>
-      </ol>
-
-      <h2 id="required-directives">Required CSP Directives</h2>
-      <p>To ensure full functionality of our web-passive solution, your technical team should update your CSP to include the following directives. These allow the browser to fetch the necessary scripts, styles, and frames from our secure domains.</p>
-
+      <h2 id="csp-hash">Optional: Add CSP Hash</h2>
+      <p>If your web infrastructure requires explicit hash-based matching policies, copy the individual values generated inside your platform installation screen and append them directly into your web server response header rules:</p>
       <ul>
-        <li><strong>script-src:</strong> Allows the JavaScript required to trigger and run the feedback forms.</li>
-        <li><strong>img-src:</strong> Allows the images and icons used within your custom themes.</li>
-        <li><strong>style-src:</strong> Allows the CSS required to style your buttons and forms. Note that GetFeedback requires 'unsafe-inline' for some styling elements.</li>
-        <li><strong>frame-src:</strong> Allows the iFrames where the feedback solution "lives" on your page.</li>
-        <li><strong>connect-src:</strong> Allows the browser to send the collected feedback data back to our servers.</li>
-        <li><strong>font-src:</strong> Allows for custom fonts or Google Fonts used within your themes.</li>
+        <li><strong>On script-src:</strong> <code>'sha256-l2ABcDC7VZcirDGllBhNKaAYFYNnOZGjFc6nWjJmnLQ='</code></li>
+        <li><strong>On style-src:</strong> <code>'nonce-17ddf23a141a'</code></li>
       </ul>
 
-      <h2 id="basic-template">Basic CSP Template</h2>
-      <p>Below is a standard configuration that includes the GetFeedback (Usabilla) domains. You can provide this snippet to your web developers as a starting point:</p>
+      <h2 id="checking-csp">How to find out if your website uses a CSP</h2>
+      <p>A Content Security Policy is fully public and visible via your client side engine. If you have installed the GetFeedback snippet but your visual components aren't showing or render completely unstyled, you can trace down active rules using three standard discovery methods:</p>
 
-      <pre style="background: #f5f5f5; padding: 16px; border-radius: 4px; overflow-x: auto; font-size: 0.9em;"><code>script-src 'self' 'sha256-&lt;YOUR_HASH&gt;'
+      <h3>Option 1 - Use developer tools to find a CSP in a response header</h3>
+      <ol>
+        <li>Using your choice of browser, open your native developer tools panel and navigate over to the <strong>Network</strong> layout tab.</li>
+        <li>Reload your environment and select the primary document file that builds your web page (typically matching your active root domain string).</li>
+        <li>Verify you are looking at a successful <code>200 OK</code> response code block, and scroll down into the <strong>Response Headers</strong> section box.</li>
+        <li>Scan the headers for a line explicitly named <code>Content-Security-Policy</code> to inspect your operational directives.</li>
+      </ol>
+
+      <h3>Option 2 - Use a 3rd party browser extension to find a CSP in the response header</h3>
+      <p>There are multiple browser extensions available across Chromium-based distribution stores that automatically extract and list active server policies on your active viewport tab.</p>
+      <div class="pro-tip">
+        <strong>Security Notice:</strong> Be cautious when installing security evaluation extensions inside your workplace browser profile, as some utilities request invasive data access permissions. Verify choices with your IT administrator first.
+      </div>
+
+      <h3>Option 3 - Use the page source to find a CSP in a meta tag</h3>
+      <ol>
+        <li>Open a fresh window tab, navigate to your target production site layout, and right-click any empty white margin area to select <strong>View Page Source</strong>.</li>
+        <li>Trigger your browser's page-text search interface panel (using <strong>Ctrl + F</strong> on Windows, or <strong>Cmd + F</strong> on macOS layouts).</li>
+        <li>Search for the precise string tag phrase: <code>"Content-Security-Policy"</code>.</li>
+        <li>If a match is found embedded inline, your policy parameters will follow directly within that element's <code>content</code> attribute.</li>
+      </ol>
+
+      <h2 id="resolving-errors">Resolving Active CSP Console Faults</h2>
+      <p>If a specific CSP error message is showing up inside your browser's diagnostic console view, you can selectively resolve the constraint by appending the appropriate directive category parameters from the comprehensive list below into your system configuration rules:</p>
+
+      <h3>Required CSP Directives Reference</h3>
+      <ul>
+        <li><strong>script-src:</strong> Authorizes the dynamic core JavaScript engine execution calls required to process and run your interactive survey overlays.</li>
+        <li><strong>img-src:</strong> Validates loading permissions for assets, feedback graphics, and user icon elements mapped within your custom asset dashboard themes.</li>
+        <li><strong>style-src:</strong> Unlocks stylesheet rendering layers. Note that the asset engine utilizes specific inline variations, which may require you to grant an explicit <code>'unsafe-inline'</code> bypass value inside this directive section block.</li>
+        <li><strong>frame-src:</strong> Allows the secure code iFrame containers to cleanly render on your structural template page margins.</li>
+        <li><strong>connect-src:</strong> Permits client-side scripts to run API fetch methods that safely transmit submission feedback payloads back to our data storage servers.</li>
+        <li><strong>font-src:</strong> Unblocks typography resource downloads or external asset files (such as Google Fonts) integrated inside your visual interface profiles.</li>
+      </ul>
+
+      <h3>Basic Policy Whitelist Template</h3>
+      <p>Provide the following basic directive reference block template directly to your systems engineering or web development team to use as an implementation roadmap:</p>
+
+      <pre style="background: #f5f5f5; padding: 16px; border-radius: 4px; overflow-x: auto; font-size: 0.9em;"><code>script-src 'self' 'sha256-l2ABcDC7VZcirDGllBhNKaAYFYNnOZGjFc6nWjJmnLQ='
   https://d6tizftlrpuof.cloudfront.net *.usabilla.com;
 img-src 'self' https://d6tizftlrpuof.cloudfront.net
   https://*.usabilla.com;
@@ -70,18 +94,18 @@ font-src 'self' https://d6tizftlrpuof.cloudfront.net
   *.usabilla.com https://fonts.googleapis.com;</code></pre>
 
       <h2 id="style-restrictions">Troubleshooting: Style Restrictions</h2>
-      <p>In some highly secure environments, organizations do not allow a "static nonce" or 'unsafe-inline' within the style-src directive.</p>
-      <p>If your security policy restricts these, please be aware of the following impact:</p>
+      <p>In highly regulated enterprise networks, technical compliance structures may completely block the inclusion of fallback rules like <code>'unsafe-inline'</code> within the live <code>style-src</code> directive block.</p>
+      <p>If your policy strictness forces these exact constraints, take note of the following operational footprint impact:</p>
       <ul>
-        <li><strong>What won't work:</strong> The feedback button and the feedback form will lose their custom styling (they may appear as plain text or broken elements).</li>
-        <li><strong>What will work:</strong> Active Trigger-based forms and code-related features will continue to function.</li>
+        <li><strong>Affected Elements:</strong> Your passive Feedback buttons and active questionnaire modules will lose their dynamic styling characteristics (rendering layout blocks as flat, distorted text fields or unformatted broken rows).</li>
+        <li><strong>Unaffected Elements:</strong> Automated background behaviors and contextual behavioral campaign logic rules will continue to execute normally behind the scenes.</li>
       </ul>
 
-      <h3>Workaround</h3>
-      <p>If you cannot modify your <code>style-src</code> directive to accommodate GetFeedback, a custom technical implementation may be required. This typically involves using additional JavaScript or CSS to manually manage the <code>usabilla_live_button_container</code> after the solution has initialized on your page.</p>
+      <h3>Alternative Script Workaround</h3>
+      <p>If your engineering infrastructure cannot relax its structural <code>style-src</code> rules to accommodate the tracking snippet, you must configure a manual callback interface. This requires deploying explicit custom hooks to programmatically grab and restyle the native <code>usabilla_live_button_container</code> node element after the core solution has completed initializing on your page tree layout.</p>
 
       <div class="important-note">
-        <strong>Need more help?</strong> If your technical team has questions regarding specific hashes or domain allowlisting, please contact GetFeedback Support.
+        <strong>Need more help?</strong> If your development team has additional technical questions regarding custom nonce distribution channels, feel free to coordinate directly with GetFeedback Support.
       </div>
     </main>
 
@@ -89,9 +113,9 @@ font-src 'self' https://d6tizftlrpuof.cloudfront.net
       <div class="sidebar-section">
         <div class="sidebar-title">In This Article</div>
         <ul class="article-sidebar-links">
-          <li><a href="#checking-csp">Checking for CSP Issues</a></li>
-          <li><a href="#required-directives">Required Directives</a></li>
-          <li><a href="#basic-template">Basic Template</a></li>
+          <li><a href="#csp-hash">Add CSP Hash</a></li>
+          <li><a href="#checking-csp">How to find a CSP</a></li>
+          <li><a href="#resolving-errors">Resolving Console Faults</a></li>
           <li><a href="#style-restrictions">Style Restrictions</a></li>
         </ul>
       </div>
@@ -110,8 +134,6 @@ font-src 'self' https://d6tizftlrpuof.cloudfront.net
     &copy; 2026 GetFeedback. All rights reserved.
   </footer>
   <script src="../assets/script.js"></script>
-  <!-- begin usabilla live embed code -->
   <script type="text/javascript">window.lightningjs||function(n){var e="lightningjs";function t(e,t){var r,i,a,o,d,c;return t&&(t+=(/\?/.test(t)?"&":"?")+"lv=1"),n[e]||(r=window,i=document,a=e,o=i.location.protocol,d="load",c=0,function(){n[a]=function(){var t=arguments,i=this,o=++c,d=i&&i!=r&&i.id||0;function s(){return s.id=o,n[a].apply(s,arguments)}return(e.s=e.s||[]).push([o,d,t]),s.then=function(n,t,r){var i=e.fh[o]=e.fh[o]||[],a=e.eh[o]=e.eh[o]||[],d=e.ph[o]=e.ph[o]||[];return n&&i.push(n),t&&a.push(t),r&&d.push(r),s},s};var e=n[a]._={};function s(){e.P(d),e.w=1,n[a]("_load")}e.fh={},e.eh={},e.ph={},e.l=t?t.replace(/^\/\//,("https:"==o?o:"http:")+"//"):t,e.p={0:+new Date},e.P=function(n){e.p[n]=new Date-e.p[0]},e.w&&s(),r.addEventListener?r.addEventListener(d,s,!1):r.attachEvent("onload",s);var l=function(){function n(){return["<!DOCTYPE ",o,"><",o,"><head></head><",t,"><",r,' src="',e.l,'"></',r,"></",t,"></",o,">"].join("")}var t="body",r="script",o="html",d=i[t];if(!d)return setTimeout(l,100);e.P(1);var c,s=i.createElement("div"),h=s.appendChild(i.createElement("div")),u=i.createElement("iframe");s.style.display="none",d.insertBefore(s,d.firstChild).id="lightningjs-"+a,u.frameBorder="0",u.id="lightningjs-frame-"+a,/MSIE[ ]+6/.test(navigator.userAgent)&&(u.src="javascript:false"),u.allowTransparency="true",h.appendChild(u);try{u.contentWindow.document.open()}catch(n){e.domain=i.domain,c="javascript:var d=document.open();d.domain='"+i.domain+"';",u.src=c+"void(0);"}try{var p=u.contentWindow.document;p.write(n()),p.close()}catch(e){u.src=c+'d.write("'+n().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}e.P(2)};e.l&&l()}()),n[e].lv="1",n[e]}var r=window.lightningjs=t(e);r.require=t,r.modules=n}({});window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/3a0c5bba3e9c.js");</script>
-  <!-- end usabilla live embed code -->
-</body>
+  </body>
 </html>
