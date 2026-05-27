@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Setting Up a Feedback Button (passive form) | Help Center</title>
+  <title>Setting Up a Feedback Button (Passive Form) | Help Center</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
@@ -22,113 +22,72 @@
   </header>
 
   <div class="breadcrumb">
-    <a href="../index.html">GetFeedback</a> / Setting Up a Feedback Button (passive form)
+    <a href="../index.html">GetFeedback</a> / Setting Up a Feedback Button
   </div>
 
   <div class="main-wrapper">
     <main class="main-content">
       <div class="article-meta">Last updated: May 12, 2026</div>
-      <h1>Setting Up a Feedback Button (passive form)</h1>
-      <p class="article-intro">A Feedback Button is a floating tab (or "button") on your website that allows visitors to share feedback at any time. This guide walks you through the flow for building, customizing, and installing your Feedback Button.</p>
+      <h1>Setting Up a Feedback Button</h1>
+      <p class="article-intro">A Feedback Button acts as a passive, always-on floating asset anchored to the side of your web page, enabling visitors to proactively submit localized insights or global site reviews at any point during their session layout journey.</p>
 
-      <h2 id="getting-started">Getting Started</h2>
+      <h2 id="start-widget">Step 1: Start Your Form</h2>
       <ol>
-        <li>Log in to GetFeedback.</li>
-        <li>From the Home dashboard, locate the <strong>Choose how you want to collect feedback</strong> section or select your chosen option from the panel on the left.</li>
-        <li>Find the <strong>Feedback Button</strong> card and click <strong>Create</strong>.</li>
-        <li>The next page is divided into 3 sections: <strong>Build Form</strong>, <strong>Setup</strong>, and <strong>Launch</strong>.</li>
+        <li>From your dashboard workspace, locate the sidebar panel or main overview and select <strong>Feedback button</strong>, then click <strong>Create</strong> (top-right) to launch the builder.</li>
+        <li>Note the progressive stage navigation bar displayed along the left margin of your browser window — this walks you through sequential <strong>Build form</strong>, <strong>Setup</strong>, and <strong>Install</strong> procedures.</li>
+        <li>You can also activate back-end data tracking fields like <strong>Store IP address</strong> and <strong>Store user location</strong> by managing the toggles located inside the <strong>Advanced Settings</strong> block at the bottom of the tool pane.</li>
       </ol>
 
-      <h2 id="build-form">Step 1: Build Your Form</h2>
-      <p>The "Build Form" section is divided into three main views: the Start Page, Form Page, and End Page.</p>
+      <h2 id="build-experience">Step 2: Build the Experience</h2>
+      <p>The builder uses a dedicated three-stage layout system consisting of sequential page tabs located at the top of your canvas grid workspace to outline the user feedback interface.</p>
 
-      <h3>The Start Page</h3>
-      <p>This is the initial screen users see when they click the feedback button.</p>
+      <h3>The Start Page (Intro Screen)</h3>
+      <p>This configures the portal frame card users interact with immediately upon clicking the floating tab. You can customize the structural headings and format the entry selection types using the left sidebar property tools:</p>
       <ul>
-        <li><strong>Visual Feedback:</strong> Choose between "Specific" (allows users to point to an element on your site), "Generic" (site-wide feedback), or both. You also have the option for "No visual feedback"</li>
-        <li><strong>Text Customization:</strong> Edit the Title (e.g., "Give us your feedback") and Subtitle to set expectations for your users.</li>
-        <li><strong>Feedback Options:</strong> Customize the labels for the "Specific" and "Generic" feedback cards.</li>
+        <li><strong>Visual Feedback Selector:</strong> Open the dropdown menu to declare structural behavior restrictions. Choose between <strong>Specific or generic</strong>, <strong>Always specific</strong>, <strong>Always generic</strong>, or <strong>No visual feedback</strong>. These parameters govern whether users can highlight a precise design sub-element or capture a global full-page snapshot.</li>
+        <li><strong>Text Labels:</strong> Edit the default <strong>Title</strong> (e.g., "Give us your feedback") and descriptive <strong>Subtitle</strong> text cards.</li>
+        <li><strong>Feedback Options Accordions:</strong> Click open individual setting drawers to customize text labels inside the interactive selection cards (e.g., renaming the specific feedback card action text).</li>
+        <li><strong>Custom Option Toggle:</strong> Flip on the <strong>Custom Option</strong> toggle switch at the bottom of the panel to inject an additional contact link card into the portal interface. This can provide direct user access to an out-of-band communication vector such as a contact form or chat integration layout.</li>
       </ul>
 
-      <h3>Adding a Custom Action Option</h3>
-      <p>In addition to standard feedback types, you can add a third "Custom" card to your Intro Screen. This is ideal for directing users to a specific URL or triggering a custom script (like opening a live chat or a help article).</p>
-
-      <ol>
-        <li><strong>Enable the Custom Option</strong><br>On the Start Page tab, scroll to the bottom of the left-hand sidebar and toggle on <strong>Add Custom Option</strong>.</li>
-        <li><strong>Customize the Content</strong><br>Once enabled, a third card will appear in the preview. You can then define:
-          <ul>
-            <li><strong>Custom Title:</strong> The bold heading for the card (e.g., "Contact Support").</li>
-            <li><strong>Custom Text:</strong> A short description to guide the user (e.g., "Talk to our team in real-time").</li>
-          </ul>
-        </li>
-        <li><strong>Define the "On Click" Action</strong><br>Use the <strong>On Click</strong> dropdown to decide what happens when a user selects this card:
-          <ul>
-            <li><strong>Redirect to URL:</strong> Automatically send the user to a specific webpage.</li>
-            <li><strong>Execute Script:</strong> Trigger a specific JavaScript function on your site.</li>
-          </ul>
-        </li>
-      </ol>
-
       <h3>The Form Page</h3>
-      <p>This is where you collect the actual data.</p>
+      <p>This serves as the secondary data capture layer presented after a user makes their initial selection on the Start page. Construct this view by dragging or clicking components inside the <strong>Add questions</strong> sidebar module:</p>
       <ul>
-        <li><strong>Add Questions:</strong> Click elements from the left sidebar, including:
-          <ul>
-            <li><strong>Format:</strong> Input text or Paragraph fields.</li>
-            <li><strong>Feedback:</strong> NPS, Rating scales, or Mood (Note that this question is mandatory).</li>
-            <li><strong>Input:</strong> Email or Comment fields.</li>
-            <li><strong>Choice:</strong> Drop-downs, Radio buttons, or Tags.</li>
-          </ul>
-        </li>
-        <li><strong>Edit Questions:</strong> Click on a question in the preview to toggle the <strong>Required</strong> setting or delete it.</li>
+        <li><strong>Feedback:</strong> Drop responsive rating components onto your page card, choosing between <strong>NPS</strong> metrics, star <strong>Rating</strong> rows, or interactive <strong>Mood</strong> scales (e.g., an emoji array card containing a "How do you feel?" prompt).</li>
+        <li><strong>Input:</strong> Embed plain <strong>Input text</strong> fields, larger multi-line <strong>Text area</strong> boxes, or designated <strong>Email</strong> blocks.</li>
+        <li><strong>Choice:</strong> Manage structured multi-option fields using <strong>Drop down</strong> selectors, <strong>Radio buttons</strong> layout cells, or custom item <strong>Tag</strong> elements.</li>
+        <li><strong>Format:</strong> Provide contextual line breaks or textual instructions anywhere on the frame grid using a <strong>Paragraph</strong> block.</li>
       </ul>
 
       <h3>The End Page</h3>
-      <p>Configure the "Thank You" message users see after submitting.</p>
+      <p>Configure the terminal response view presented to respondents immediately following submission validation. Use the property cards to shape the confirmation messaging layout:</p>
       <ul>
-        <li><strong>Message:</strong> Add a custom thank you note.</li>
-        <li><strong>Buttons:</strong> Edit the primary button text (e.g., "Back to site"). You can also toggle on a <strong>Secondary button</strong> for additional calls to action, like "Cancel" or "Visit Help Center."</li>
+        <li><strong>Title & Message text:</strong> Customize the transactional validation message lines (e.g., displaying "Thank you for your feedback!").</li>
+        <li><strong>Button Customization:</strong> Define the redirection navigation path by modifying the main <strong>Button Text</strong> card (e.g., setting the layout card link text to "Back to site").</li>
+        <li><strong>Give More Feedback Switch:</strong> Toggle this control to display a secondary text link shortcut on the completion card grid. This allows users to restart the survey sequence instantly by using a custom <strong>Button Label</strong> text link.</li>
       </ul>
 
-      <h2 id="setup">Step 2: Setup (Customizing the Button)</h2>
-      <p>Once your form is built, click <strong>Next</strong> to customize the appearance of the button that will live on your site.</p>
-
-      <h3>Option A: Color Customization</h3>
+      <h2 id="setup-button">Step 3: Setup and Customize the Button</h2>
+      <p>Click <strong>Next</strong> to progress past the structural build environment into the <strong>Setup</strong> canvas workspace. This panel manages the styling properties of the button asset that floats on your active client templates:</p>
       <ul>
-        <li><strong>Position:</strong> Use the dropdown to place the button (e.g., Bottom Right, Bottom Left).</li>
-        <li><strong>Button Colour:</strong> Select from your brand palette or preset colors.</li>
-        <li><strong>Button Type:</strong> Choose between horizontal or vertical layouts for the text/icon.</li>
+        <li><strong>Button Color:</strong> Apply your corporate identity styling properties by selecting one of the palette nodes (e.g., green, blue, purple, black, or orange swatch profiles).</li>
+        <li><strong>Button Type:</strong> Select the screen layout anchoring architecture by picking between standard vertical alignment frames or horizontal orientation modules pinned to the screen margin.</li>
       </ul>
 
-      <h3>Option B: Upload Image for Button</h3>
-      <p>If you prefer a custom look:</p>
-      <ul>
-        <li>Upload a <strong>.png, .jpeg, or .jpg</strong></li>
-        <li><strong>Recommended Dimensions:</strong> 130 x 40 pixels for desktop; 70 x 35 pixels for mobile.</li>
-        <li><strong>Retina Support:</strong> Upload an image at 2x the size and select <strong>Downscale image by 50%</strong> to ensure it looks sharp on high-density displays.</li>
-      </ul>
+      <h2 id="install">Step 4: Install Your Button</h2>
+      <p>Clicking the final phase control moves your workspace frame into the terminal <strong>Install</strong> tab view to complete the site deployment sequence.</p>
 
-      <h2 id="advanced">Advanced Settings</h2>
-      <p>In both the Build and Setup phases, you can toggle <strong>Advanced Settings</strong> at the bottom of the sidebar to:</p>
-      <ul>
-        <li><strong>Store IP Address:</strong> Record the user's IP with their response.</li>
-        <li><strong>Store User Location:</strong> Capture geographical data based on the user's connection.</li>
-      </ul>
+      <h3>1. Code Snippet Copy and Placement</h3>
+      <p>Click the <strong>View code</strong> or <strong>Copy code</strong> controls to capture the underlying platform embedding script module. Paste this compiled markup string straight into your master application layout templates, placing it immediately preceding the terminal closing <code>&lt;/body&gt;</code> tag on pages where tracking is required.</p>
 
-      <h2 id="install">Step 3: Install</h2>
-      <p>The final step is to bring your Feedback Button to life on your website.</p>
-      <div class="pro-tip">
-        <strong>Important:</strong> If your website uses a Content Security Policy (CSP), you’ll need to add a hash to your website’s <code>script-src</code>. To find this hash, go to Setup, find your Feedback Button, then select <strong>Options &gt; Installation</strong>. Copy the hash below your button code and add it to your site.
-      </div>
-      <ol>
-        <li><strong>Get the Code:</strong> Click <strong>View Code</strong> or <strong>Copy Code</strong> to grab your unique snippet.</li>
-        <li><strong>Paste the Code:</strong> Paste this snippet right before the </body> tag in your DOM or the "custom code" section of your CMS.</li>
-        <li><strong>Save and Publish:</strong> Once your site is updated, the button will appear automatically.</li>
-        <li><strong>Preview:</strong> You can use the Preview box on the Install page to see how the button will behave before you leave the builder.</li>
-      </ol>
+      <h3>2. Content Security Policy (CSP) Configurations</h3>
+      <p>If your web layout platform operates under tight server restrictions, click the <strong>Include CSP Hash</strong> link on the modal panel code frame to access your deployment properties. You must copy these specific hash properties directly into your page headers.</p>
+
+      <h2 id="preview">Pro-Tip: Live Preview Verification</h2>
+      <p>Before closing out your production setup, use the interactive preview container displayed directly on the Install setup tab. Click the rendered floating tab component layout directly within the preview frame to step through your entire responsive visual selection grid and ensure your data capture cells function properly before finalizing deployment.</p>
 
       <div class="pro-tip">
-        <strong>Next steps:</strong> After installation, head to <a href="analyse-results.html">How to Analyse Your Results</a> to learn how to view and filter your feedback data.
+        <strong>Next steps:</strong> After deploying your script snippet asset, head to <a href="analyse-results.html">How to Analyse Your Results</a> to interpret incoming data tracking points.
       </div>
     </main>
 
@@ -136,17 +95,17 @@
       <div class="sidebar-section">
         <div class="sidebar-title">In This Article</div>
         <ul class="article-sidebar-links">
-          <li><a href="#getting-started">Getting Started</a></li>
-          <li><a href="#build-form">Build Your Form</a></li>
-          <li><a href="#setup">Setup (Customizing)</a></li>
-          <li><a href="#advanced">Advanced Settings</a></li>
-          <li><a href="#install">Install</a></li>
+          <li><a href="#start-widget">Start Your Form</a></li>
+          <li><a href="#build-experience">Build the Experience</a></li>
+          <li><a href="#setup-button">Setup and Customize</a></li>
+          <li><a href="#install">Install Your Button</a></li>
+          <li><a href="#preview">Live Preview Verification</a></li>
         </ul>
       </div>
       <div class="sidebar-section">
         <div class="sidebar-title">Related Articles</div>
         <ul class="article-sidebar-links">
-          <li><a href="implementation.html">Implementing GetFeedback</a></li>
+          <li><a href="web-campaigns.html">Trigger-based Forms</a></li>
           <li><a href="analyse-results.html">Analyse Your Results</a></li>
           <li><a href="getting-started.html">Getting Started</a></li>
         </ul>
@@ -158,8 +117,6 @@
     &copy; 2026 GetFeedback. All rights reserved.
   </footer>
   <script src="../assets/script.js"></script>
-  <!-- begin usabilla live embed code -->
   <script type="text/javascript">window.lightningjs||function(n){var e="lightningjs";function t(e,t){var r,i,a,o,d,c;return t&&(t+=(/\?/.test(t)?"&":"?")+"lv=1"),n[e]||(r=window,i=document,a=e,o=i.location.protocol,d="load",c=0,function(){n[a]=function(){var t=arguments,i=this,o=++c,d=i&&i!=r&&i.id||0;function s(){return s.id=o,n[a].apply(s,arguments)}return(e.s=e.s||[]).push([o,d,t]),s.then=function(n,t,r){var i=e.fh[o]=e.fh[o]||[],a=e.eh[o]=e.eh[o]||[],d=e.ph[o]=e.ph[o]||[];return n&&i.push(n),t&&a.push(t),r&&d.push(r),s},s};var e=n[a]._={};function s(){e.P(d),e.w=1,n[a]("_load")}e.fh={},e.eh={},e.ph={},e.l=t?t.replace(/^\/\//,("https:"==o?o:"http:")+"//"):t,e.p={0:+new Date},e.P=function(n){e.p[n]=new Date-e.p[0]},e.w&&s(),r.addEventListener?r.addEventListener(d,s,!1):r.attachEvent("onload",s);var l=function(){function n(){return["<!DOCTYPE ",o,"><",o,"><head></head><",t,"><",r,' src="',e.l,'"></',r,"></",t,"></",o,">"].join("")}var t="body",r="script",o="html",d=i[t];if(!d)return setTimeout(l,100);e.P(1);var c,s=i.createElement("div"),h=s.appendChild(i.createElement("div")),u=i.createElement("iframe");s.style.display="none",d.insertBefore(s,d.firstChild).id="lightningjs-"+a,u.frameBorder="0",u.id="lightningjs-frame-"+a,/MSIE[ ]+6/.test(navigator.userAgent)&&(u.src="javascript:false"),u.allowTransparency="true",h.appendChild(u);try{u.contentWindow.document.open()}catch(n){e.domain=i.domain,c="javascript:var d=document.open();d.domain='"+i.domain+"';",u.src=c+"void(0);"}try{var p=u.contentWindow.document;p.write(n()),p.close()}catch(e){u.src=c+'d.write("'+n().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}e.P(2)};e.l&&l()}()),n[e].lv="1",n[e]}var r=window.lightningjs=t(e);r.require=t,r.modules=n}({});window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/3a0c5bba3e9c.js");</script>
-  <!-- end usabilla live embed code -->
-</body>
+  </body>
 </html>
