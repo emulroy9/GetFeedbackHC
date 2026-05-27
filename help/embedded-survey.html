@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Setting Up Embedded Forms (In-Page) | Help Center</title>
+  <title>Setting Up an Embedded Form (In-Page) | Help Center</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 <body>
@@ -22,18 +22,17 @@
   </header>
 
   <div class="breadcrumb">
-    <a href="../index.html">GetFeedback</a> / Setting Up Embedded Forms
+    <a href="../index.html">GetFeedback</a> / Setting Up an Embedded Form
   </div>
 
   <div class="main-wrapper">
     <main class="main-content">
       <div class="article-meta">Last updated: May 12, 2026</div>
-      <h1>Setting Up Embedded Forms (In-Page)</h1>
-      <p class="article-intro">Embedded forms allow you to collect feedback directly within your website content, such as at the end of help articles or documentation pages. Unlike floating buttons or pop-ups, these forms are built seamlessly into your page layout.</p>
-<sup><span style="color:#d63447;">Add picture here or perhaps a live Widget?</span></sup>
+      <h1>Setting Up an Embedded Form</h1>
+      <p class="article-intro">An Embedded Form lets you collect feedback directly within your website content (for example, at the end of help articles or documentation pages). Unlike the Feedback Button or Trigger-based Forms, an Embedded Form is placed directly into your page HTML and renders inline with your content.</p>
       <h2 id="start-widget">Step 1: Start Your Form</h2>
       <ol>
-        <li>From the Home dashboard, navigate to <strong>Embedded Feedback</strong> and click <strong>Create</strong>.</li>
+        <li>From the dashboard, navigate to <strong>Embedded Form</strong> and click <strong>Create</strong> (top-right). This opens the <strong>Build form</strong> view.</li>
         <li><strong>Select Form Type:</strong> Choose how your feedback experience begins. This "Start Form" remains static on your page:
           <ul>
             <li><strong>Mood:</strong> A quick emoji-based rating.</li>
@@ -44,7 +43,9 @@
       </ol>
 
       <h2 id="build-experience">Step 2: Build the Experience</h2>
-      <p>The builder uses a multi-page structure, allowing you to create a conversation with your users.</p>
+      <p>The builder uses a multi-page structure, allowing you to create a conversation with your users. When you open the <strong>Build form</strong> view you'll see the <strong>Add questions</strong> menu on the left (question types, NPS, Mood, Toggle, Input, etc.) and advanced settings beneath it (for example, options to store IP address or user location).</p>
+
+      <p>Use the page tabs at the top of the builder to configure the <strong>Start</strong> page, any intermediary pages, and the <strong>End</strong> page. You can preview the form using the <strong>Preview</strong> button, and when you click <strong>Next</strong> you'll be shown the <strong>Install</strong> page where you can copy the global script and the per-page placement code.</p>
 
       <h3>The Start Page</h3>
       <p>This is the form your users see first. Customize the <strong>Title</strong> (e.g., "Was this useful for you?") and define the initial interaction.</p>
@@ -61,7 +62,7 @@
       <p>Configure the final screen users see after submitting their feedback. Customize the <strong>Header</strong> (e.g., "Thank You") and the confirmation message.</p>
 
       <h2 id="install">Step 3: Install Your Form</h2>
-      <p>Unlike floating buttons, Embedded forms require a two-step installation to ensure the form appears in the correct location.</p>
+      <p>Unlike floating buttons, Embedded Forms require a two-step installation to ensure the form appears in the correct location.</p>
 
       <h3>1. The Global Script Snippet</h3>
       <p>Click <strong>View Code</strong> for the Script Snippet. Copy and paste this code into your website's HTML, specifically just before the closing <code>&lt;/body&gt;</code> tag on every page where you want forms to function.</p>
@@ -70,7 +71,7 @@
       <p>This specific "nonce" or identifier tells the global script exactly where to render the form on a specific page.</p>
       <ul>
         <li><strong>Placement:</strong> Copy the <strong>Form Code</strong> and paste it into the specific <code>&lt;div&gt;</code> or section of your HTML where the form should be displayed.</li>
-        <li><strong>Custom Variables (Advanced):</strong> Check the <strong>Configure custom variables</strong> box to add metadata to your feedback. You can define up to three optional variables (Category, Subcategory, Item) to help group and filter responses in your feedback dashboard. Learn more in our <a href="custom-variables.html">Custom Variables guide</a>.</li>
+        <li><strong>Custom Variables (Advanced):</strong> Check the <strong>Configure custom variables</strong> box to add metadata to your feedback. You can define up to three optional variables (Category, Subcategory, Item) to help group and filter responses in your feedback dashboard.</li>
       </ul>
       <sup><span style="color:#d63447;">Add picture here demonstrating code placement</span></sup>
 
@@ -78,7 +79,7 @@
       <p>Before finishing, click the <strong>Preview</strong> button at the top of the builder. This allows you to test the interactive flow—such as clicking the "Toggle" buttons—to ensure your follow-up questions appear exactly as intended within the embedded container.</p>
 
       <div class="pro-tip">
-        <strong>Next steps:</strong> After installation, head to <a href="analyse-results.html">How to Analyse Your Results</a> to track feedback from your embedded surveys.
+        <strong>Next steps:</strong> After installation, head to <a href="analyse-results.html">How to Analyse Your Results</a> to track feedback from your embedded form responses.
       </div>
     </main>
 
@@ -95,7 +96,7 @@
       <div class="sidebar-section">
         <div class="sidebar-title">Related Articles</div>
         <ul class="article-sidebar-links">
-          <li><a href="custom-variables.html">Custom Variables</a></li>
+          <li>Custom Variables</li>
           <li><a href="analyse-results.html">Analyse Your Results</a></li>
           <li><a href="getting-started.html">Getting Started</a></li>
         </ul>
