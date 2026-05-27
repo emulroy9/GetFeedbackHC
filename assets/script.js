@@ -68,6 +68,12 @@ function performSearch(query) {
   return results;
 }
 
+function resolveSearchUrl(url) {
+  const isArticlePage = window.location.pathname.includes('/help/');
+  const adjustedUrl = isArticlePage ? url.replace('help/', '') : url;
+  return new URL(adjustedUrl, window.location.href).href;
+}
+
 function showSuggestions(searchContainer, results) {
   // Remove existing suggestions
   const existingSuggestions = searchContainer.querySelector('.search-suggestions');
@@ -86,8 +92,7 @@ function showSuggestions(searchContainer, results) {
   
   results.forEach(result => {
     const link = document.createElement('a');
-    const adjustedUrl = isArticlePage ? result.url.replace('help/', '') : result.url;
-    link.href = adjustedUrl;
+    link.href = resolveSearchUrl(result.url);
     link.className = 'search-suggestion-item';
     link.innerHTML = `<span class="search-suggestion-title">${result.title}</span><span class="search-suggestion-url">${result.url}</span>`;
     suggestionsDiv.appendChild(link);
@@ -123,9 +128,7 @@ searchInputs.forEach(input => {
     if (e.key === 'Enter') {
       const results = performSearch(input.value);
       if (results.length > 0) {
-        const isArticlePage = window.location.pathname.includes('/help/');
-        const adjustedUrl = isArticlePage ? results[0].url.replace('help/', '') : results[0].url;
-        window.location.href = adjustedUrl;
+        window.location.href = resolveSearchUrl(results[0].url);
       }
     }
   });
