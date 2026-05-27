@@ -33,40 +33,33 @@
       <h2 id="start-widget">Step 1: Start Your Form</h2>
       <ol>
         <li>From the dashboard, navigate to <strong>Embedded Form</strong> and click <strong>Create</strong> (top-right). This opens the <strong>Build form</strong> view.</li>
-        <li><strong>Select Form Type:</strong> Choose how your feedback experience begins. This "Start Form" remains static on your page:
-          <ul>
-            <li><strong>Mood:</strong> A quick emoji-based rating.</li>
-            <li><strong>NPS:</strong> The standard Net Promoter Score scale.</li>
-            <li><strong>Toggle:</strong> A simple "Yes/No" interaction (e.g., "Was this helpful?").</li>
-          </ul>
-        </li>
+        <li>Note the <strong>Add questions</strong> menu on the left — it lists all the question types available in the builder. Use this menu to drag or add controls to any page.</li>
         <li>You can also toggle<strong>Store IP Address</strong> and <strong>Store User Location</strong> from the  <strong>Advanced Settings</strong> menu.</li>
       </ol>
 
       <h2 id="build-experience">Step 2: Build the Experience</h2>
-      <p>The builder uses a multi-page structure, allowing you to create a conversation with your users. Once you open the <strong>Build form</strong> viewm, you can add your chosen questions from the previously mentioned menu on the left.</p>
+      <p>The builder uses a multi-page structure, allowing you to create a conversation with your users. Once you open the <strong>Build form</strong> view, you can add your chosen questions from the previously mentioned menu on the left.</p>
 
       <p>Use the page tabs at the top of the builder to configure the <strong>Start</strong> page, any intermediary pages, and the <strong>End</strong> page. You can preview the form using the <strong>Preview</strong> button, and when you click <strong>Next</strong> you'll be shown the <strong>Install</strong> page where you can copy the global script and widget code.</p>
 
       <h3>The Start Page</h3>
       <p>This is the form your users see first. Customize the <strong>Title</strong> (e.g., "Was this useful for you?") and define the initial interaction.</p>
-
-      <h3>Form Pages (Follow-up Questions)</h3>
-      <p>You can add follow-up questions that appear after a user interacts with the initial form.</p>
       <ul>
-        <li><strong>Logical Flow:</strong> If a user clicks "No" on a Toggle form, you can automatically show a Form Page asking "What can we do to improve this?"</li>
-        <li><strong>Question Types:</strong> Add Input Text, Text Areas, Checkboxes, Radio Buttons, or additional Ratings from the sidebar.</li>
-        <li><strong>Clear All:</strong> Use the "Clear All" button in the top right if you need to reset the page design.</li>
+        <li><strong>Single question only:</strong> The Start page accepts only one control. Choose one starting interaction: <strong>Mood</strong>, <strong>NPS</strong>, or <strong>Toggle</strong>.</li>
+        <li><strong>Mood:</strong> A quick emoji-based sentiment control for fast reactions.</li>
+        <li><strong>NPS:</strong> The Net Promoter Score control for promoter/detractor measurement.</li>
+        <li><strong>Toggle:</strong> A simple yes/no or helpful/not helpful choice that can trigger follow-ups.</li>
       </ul>
 
-      <h4>Available question types (intermediary pages)</h4>
-      <p>On pages between the <strong>Start</strong> and <strong>End</strong> pages you can add any of the following question types from the <strong>Add questions</strong> menu:</p>
+      <h3>Adding Pages</h3>
+      <p>You can add follow-up questions to new pages that will appear after your start page.</p>
+      <p>These additional pages allow for a variety of question types, and multiple questions per page.</p>
+      <p>You can give these pages their own titles, and add any of the following question types from the <strong>Add questions</strong> menu:</p>
       <ul>
         <li><strong>Feedback:</strong> NPS, Rating, Mood</li>
         <li><strong>Input:</strong> Input text, Text area, Email</li>
         <li><strong>Choice:</strong> Dropdown, Checkbox, Radio buttons, Toggle</li>
-        <li><strong>Format & layout:</strong> Header, Paragraph (section text / instructions)</li>
-        <li><strong>Advanced:</strong> Custom logic, validation, and conditional visibility based on prior answers</li>
+        <li><strong>Format:</strong> Header, Paragraph</li>
       </ul>
 
       <h3>The End Page</h3>
@@ -75,15 +68,14 @@
       <h4>Common End page elements</h4>
       <p>The End page typically contains confirmation and optional follow-up fields. Common elements you can add include:</p>
       <ul>
-        <li><strong>Confirmation message:</strong> Header and paragraph thanking the respondent.</li>
-        <li><strong>Follow-up input:</strong> Text area to collect more detailed comments or suggestions.</li>
-        <li><strong>Email capture:</strong> Optional email field for follow-up (if you need to contact respondents).</li>
-        <li><strong>CTA / redirect:</strong> Button or link to take the user back to the page or to a next action.</li>
-        <li><strong>Summary/score:</strong> Optional display of scores or summary information (for internal or customer-facing use).</li>
+        <li><strong>Format:</strong> Header and paragraph elements thanking the respondent.</li>
       </ul>
 
       <h2 id="install">Step 3: Install Your Form</h2>
-      <p>Unlike floating buttons, Embedded Forms require a two-step installation to ensure the form appears in the correct location.</p>
+      <h2 id="page-logic">Page Logic and Control Visibility</h2>
+      <p><strong>Page logic</strong> lets you jump users to specific pages depending on answers in the current page. <strong>Control visibility</strong> lets you show or hide questions on the same page based on a previous answer.</p>
+      <p>To edit page logic, click the three dots next to the page tab and choose <strong>Edit</strong>. In the Page Settings dialog use <strong>Add Rule</strong> to create page-level jumps. To configure control visibility, hover over a question, click the <strong>cog</strong> (settings) and use the <strong>Control visibility</strong> options along the bottom of the question settings. Note: control visibility cannot be used on the Start or End pages.</p>
+      <p>Unlike Feedback Buttons and Trigger-Based Forms, Embedded Forms require a two-step installation to ensure the form appears in the correct location.</p>
 
       <h3>1. The Global Script Snippet</h3>
       <p>Click <strong>View Code</strong> for the Script Snippet. Copy and paste this code into your website's HTML, specifically just before the closing <code>&lt;/body&gt;</code> tag on every page where you want forms to function.</p>
@@ -92,9 +84,7 @@
       <p>This specific "nonce" or identifier tells the global script exactly where to render the form on a specific page.</p>
       <ul>
         <li><strong>Placement:</strong> Copy the <strong>Form Code</strong> and paste it into the specific <code>&lt;div&gt;</code> or section of your HTML where the form should be displayed.</li>
-        <li><strong>Custom Variables (Advanced):</strong> Check the <strong>Configure custom variables</strong> box to add metadata to your feedback. You can define up to three optional variables (Category, Subcategory, Item) to help group and filter responses in your feedback dashboard.</li>
       </ul>
-      <sup><span style="color:#d63447;">Add picture here demonstrating code placement</span></sup>
 
       <h2 id="preview">Pro-Tip: Preview Your Design</h2>
       <p>Before finishing, click the <strong>Preview</strong> button at the top of the builder. This allows you to test the interactive flow—such as clicking the "Toggle" buttons—to ensure your follow-up questions appear exactly as intended within the embedded container.</p>
