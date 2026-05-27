@@ -42,14 +42,6 @@
       <h2 id="dashboard">The Analytics Dashboard</h2>
       <p>The Analytics tab provides a visual overview of your performance metrics. Key sections include:</p>
 
-      <div class="dashboard-preview" style="margin:18px 0 24px;">
-        <div style="margin-top:12px;color:#334155;">
-          <p><strong>Frequency:</strong> This section showsa timeline chart outlining the volume of responses received over the selected date range.</p>
-          <p><strong>Analytics tab:</strong> Here you can view charts related to each question in your form, along with the relevant Metadata (Device, Operating System, Browser, Most active pages, IP Addresses).</p>
-          <p><strong>Collective responses tab:</strong> This is where you can view a raw, row-by-row list of individual responses.</p>
-        </div>
-      </div>
-
       <table>
         <thead>
           <tr>
@@ -60,37 +52,31 @@
         <tbody>
           <tr>
             <td><strong>Frequency</strong></td>
-            <td>A timeline chart showing the volume of responses received over your selected date range.</td>
+            <td>This section shows a timeline chart outlining the volume of responses received over the selected date range.</td>
           </tr>
           <tr>
-            <td><strong>Mood</strong></td>
-            <td>Visualises the emotional tone of feedback using icons ranging from "Very likely" to "Very dislike."</td>
+            <td><strong>Analytics</strong></td>
+            <td>Here you can view charts related to each question in your form, along with the relevant Metadata (Device, Operating System, Browser, Most active pages, IP Addresses).</td>
           </tr>
           <tr>
-            <td><strong>Metadata</strong></td>
-            <td>Breakdowns of the technical environment of your respondents, including Device, Operating System, and Browser.</td>
-          </tr>
-          <tr>
-            <td><strong>Identifiers</strong></td>
-            <td>Detailed tracking of Geographical data, source URLs, IP Addresses, and Emails.</td>
+            <td><strong>Collective responses</strong></td>
+            <td>This is where you can view a raw, row-by-row list of individual responses.</td>
           </tr>
         </tbody>
       </table>
 
-      <div class="pro-tip">
-        <strong>Pro-tip:</strong> Use the Collective Responses tab at the top of the page to switch from visual charts to a line-by-line list of every raw response received.
-      </div>
-
       <h2 id="filters">Using Filters</h2>
-      <p>To drill down into specific data sets, click the <strong>Filters</strong> button in the top right corner. The filter modal allows you to refine results based on:</p>
+      <p>To drill down into specific data sets, click the <strong>Filters</strong> button in the top right corner. The filter modal opens with a left-hand category list and the matching controls on the right.</p>
       <ul>
-        <li><strong>Mood rating:</strong> View only positive or negative feedback.</li>
-        <li><strong>Question type:</strong> Filter by specific survey interactions.</li>
-        <li><strong>Demographics & Tech:</strong> Filter by Country, Device type, OS, or Browser.</li>
-        <li><strong>Feedback URL:</strong> See responses coming from specific pages on your site.</li>
+        <li><strong>NPS:</strong> Choose a question such as <em>How likely are you to recommend us?</em>, then filter by response type: <strong>Is detractor</strong>, <strong>Is passive</strong>, or <strong>Is promoter</strong>. You can also use the alternate logic options (<strong>Contains any of</strong>, <strong>Doesn't contain</strong>, <strong>Is exactly</strong>, <strong>Is exactly not</strong>).</li>
+        <li><strong>Device:</strong> Filter responses by device type.</li>
+        <li><strong>Operating System:</strong> Filter responses by operating system.</li>
+        <li><strong>Browser:</strong> Filter responses by browser.</li>
+        <li><strong>IP Address:</strong> Filter responses by respondent IP.</li>
+        <li><strong>Feedback URL:</strong> Enter one or more page URL paths to show responses from specific pages on your site. Press <strong>Enter</strong> or <strong>Return</strong> after each term.</li>
       </ul>
       <div class="pro-tip">
-        <strong>Note:</strong> You can also toggle the "Show responses with Email" checkbox at the bottom of the filter menu to focus on identified users.
+        <strong>Note:</strong> The modal also includes <strong>Reset filters</strong> and <strong>Apply filters</strong> controls at the bottom, so you can clear the selection or apply it to the dashboard view.
       </div>
 
       <h2 id="export">Exporting your data</h2>
@@ -98,7 +84,7 @@
       <ol>
         <li>Apply any necessary filters to your view.</li>
         <li>Click the <strong>Export</strong> button in the top right corner of the page.</li>
-        <li>The system will generate a file containing your response data.</li>
+        <li>The system will generate a .CSV file containing your response data.</li>
       </ol>
       <div class="important-note">
         <strong>Important:</strong> Any filters you have applied to your current dashboard view will also be applied to your export, ensuring you only download the data you currently need.
