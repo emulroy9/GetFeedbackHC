@@ -27,12 +27,13 @@
 
   <div class="main-wrapper">
     <main class="main-content">
-      <div class="article-meta">Last updated: May 12, 2026</div>
+      <div class="article-meta">Last updated: May 28, 2026</div>
       <h1>Creating and Launching Trigger-based Forms</h1>
       <p class="article-intro">Trigger-based forms are behavior-based forms that appear automatically when a visitor meets specific criteria. Unlike the standard "Always-on" Feedback Button, these forms are standalone and do not require a visible button to exist on the page.</p>
 
       <h2 id="survey-type">1. Choosing Your Survey Type</h2>
-      <p>To begin, navigate to <strong>Trigger-based Forms</strong> in the dashboard, and then click <strong>Create</strong>. Select the format you want first (click the <strong>Slide-out</strong> or <strong>Full-screen</strong> tile), and then <strong>Continue</strong> to open the builder.</p>
+      <p>To begin constructing a new campaign experience, click the global <strong>Create survey</strong> action control from your workspace header context menu. An overlay wizard modal titled <em>"How should feedback appear?"</em> will appear automatically on your screen template viewport grid.</p>
+      <p>Select the <strong>Trigger-based form</strong> selection option asset from the card grid, and click <strong>Continue</strong>. From there, select your required core layout format tile profile: choose either the subtle <strong>Slide-out</strong> survey card frame or the high-impact <strong>Full-screen</strong> design layout module before advancing straight into your editing canvas workspace environment.</p>
       <ul>
         <li><strong>Slide-out Survey:</strong> A subtle widget that slides in from the edge of the screen—good for quick check-ins without interrupting the user journey.</li>
         <li><strong>Full-screen Survey:</strong> A high-impact modal that overlays the page. Full-screen surveys can also be accessed via their own direct URL (visible in the Trigger-based Form overview), useful for linking in emails or support content.</li>
@@ -59,15 +60,11 @@
         <li><strong>Advanced Settings:</strong> Manage back-end submission details directly below the question menu with options to toggle <strong>Store IP address</strong> and <strong>Store user location</strong> collecting features.</li>
       </ul>
 
-<h3>Page Logic and Control Visibility</h3>
+      <h3>Page Logic and Control Visibility</h3>
       <p>Page logic is used to jump to specific pages depending on the answers given in the current page. Control visibility is used to shows questions on the same page based on the answer to a previous question. Page logic is accessed by clicking the 3 dots next to the page title and clicking edit, from here you can "Add Rule" in the page logic section. For control visibility you need to hover over a question and click the cog, you will see the control visibility options along the bottom. Note you cant used control visibility on the start or end pages</p>
 
-
       <h2 id="targeting">3. Targeting: Defining the "Who" and "Where"</h2>
-      <p>Once your form is complete you will be brought to the <Strong>Launch</Strong> page. Here you can choose to <strong>Show your form to all visitors on every page</strong>, or set your custom <strong>Targeting</strong> options within the <strong>Show your form to certain visitors</strong> option. The options are as follows:</a>. Targeting rules work as "AND" conditions—a visitor must meet all enabled criteria for the survey to trigger.</p>
-<h2 id="targeting">3. Targeting: Defining the "Who" and "Where"</h2>
-      <p>Targeting rules allow you to control exactly when and to whom your form appears. From the <strong>Launch</strong> tab, navigate to the <strong>Targeting</strong> view to choose between three global delivery configurations:</p>
-   
+      <p>Targeting rules allow you to control exactly when and to whom your form appears. From the <strong>Launch</strong> tab, navigate to the <strong>Targeting</strong> view within the <em>"Show your form to certain visitors"</em> option panel to specify deployment conditions. Targeting rules work as "AND" conditions—a visitor must meet all enabled criteria for the survey to trigger.</p>
       <ul>
         <li><strong>Visitors on a particular page:</strong> Restricts delivery strictly to a designated URL string or sub-directory match.</li>
         <li><strong>Visitor Status:</strong> Target specific segments by filtering for <strong>New</strong> or <strong>Returning</strong> visitors to your site.</li>
@@ -79,8 +76,9 @@
         <li><strong>Browser Cookies:</strong> Targets or excludes audiences depending on whether they carry a specific browser cookie payload.</li>
         <li><strong>Device Type:</strong> Limits form delivery to audiences using a specific hardware profile (such as mobile devices or desktop displays).</li>
       </ul>
+
       <h2 id="scheduling">4. Scheduling & Fatigue Management</h2>
-      <p>Within <Strong>Launch</Strong> the next option you will see is <Strong>Schedule</Strong>. This allows you to control the campaign lifecycle:</p>
+      <p>Within <strong>Launch</strong> the next option you will see is <strong>Schedule</strong>. This allows you to control the campaign lifecycle:</p>
       <ul>
         <li><strong>Activation:</strong> Choose to activate immediately, schedule a future start date, or save the campaign as "Off" to be toggled manually later.</li>
         <li><strong>Deactivation:</strong> Automatically stop the campaign on a specific date or after a certain number of responses (e.g., stop after 500 entries).</li>
@@ -137,5 +135,5 @@
   </footer>
   <script src="../assets/script.js"></script>
   <script type="text/javascript">window.lightningjs||function(n){var e="lightningjs";function t(e,t){var r,i,a,o,d,c;return t&&(t+=(/\?/.test(t)?"&":"?")+"lv=1"),n[e]||(r=window,i=document,a=e,o=i.location.protocol,d="load",c=0,function(){n[a]=function(){var t=arguments,i=this,o=++c,d=i&&i!=r&&i.id||0;function s(){return s.id=o,n[a].apply(s,arguments)}return(e.s=e.s||[]).push([o,d,t]),s.then=function(n,t,r){var i=e.fh[o]=e.fh[o]||[],a=e.eh[o]=e.eh[o]||[],d=e.ph[o]=e.ph[o]||[];return n&&i.push(n),t&&a.push(t),r&&d.push(r),s},s};var e=n[a]._={};function s(){e.P(d),e.w=1,n[a]("_load")}e.fh={},e.eh={},e.ph={},e.l=t?t.replace(/^\/\//,("https:"==o?o:"http:")+"//"):t,e.p={0:+new Date},e.P=function(n){e.p[n]=new Date-e.p[0]},e.w&&s(),r.addEventListener?r.addEventListener(d,s,!1):r.attachEvent("onload",s);var l=function(){function n(){return["<!DOCTYPE ",o,"><",o,"><head></head><",t,"><",r,' src="',e.l,'"></',r,"></",t,"></",o,">"].join("")}var t="body",r="script",o="html",d=i[t];if(!d)return setTimeout(l,100);e.P(1);var c,s=i.createElement("div"),h=s.appendChild(i.createElement("div")),u=i.createElement("iframe");s.style.display="none",d.insertBefore(s,d.firstChild).id="lightningjs-"+a,u.frameBorder="0",u.id="lightningjs-frame-"+a,/MSIE[ ]+6/.test(navigator.userAgent)&&(u.src="javascript:false"),u.allowTransparency="true",h.appendChild(u);try{u.contentWindow.document.open()}catch(n){e.domain=i.domain,c="javascript:var d=document.open();d.domain='"+i.domain+"';",u.src=c+"void(0);"}try{var p=u.contentWindow.document;p.write(n()),p.close()}catch(e){u.src=c+'d.write("'+n().replace(/"/g,String.fromCharCode(92)+'"')+'");d.close();'}e.P(2)};e.l&&l()}()),n[e].lv="1",n[e]}var r=window.lightningjs=t(e);r.require=t,r.modules=n}({});window.usabilla_live = lightningjs.require("usabilla_live", "//w.usabilla.com/3a0c5bba3e9c.js");</script>
-  </body>
+</body>
 </html>
