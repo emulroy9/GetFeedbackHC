@@ -39,7 +39,7 @@ if (navLinks.length) {
 const articles = [
   { title: 'Sign Up & Onboarding', url: 'help/sign-up-onboarding.html', keywords: ['sign up', 'account', 'team', 'invite', 'onboarding'] },
   { title: 'Getting Started', url: 'help/getting-started.html', keywords: ['getting started', 'dashboard', 'feedback', 'types'] },
-  { title: 'Installation & Implementation', url: 'help/implementation.html', keywords: ['installation', 'implementation', 'code', 'snippet', 'gtm', 'google tag manager'] },
+  { title: 'Installation & Implementation', url: 'help/google-tag-manager.html', keywords: ['installation', 'implementation', 'code', 'snippet', 'gtm', 'google tag manager'] },
   { title: 'Feedback Button', url: 'help/feedback-button.html', keywords: ['feedback button', 'passive form', 'floating', 'button'] },
   { title: 'Trigger-based Forms', url: 'help/web-campaigns.html', keywords: ['trigger-based', 'campaigns', 'triggered', 'behavior', 'survey'] },
   { title: 'Targeting Options for Trigger-based Forms', url: 'help/web-campaigns-targeting.html', keywords: ['targeting', 'targeting rules', 'campaign targeting', 'targeting options'] },

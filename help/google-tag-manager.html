@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deploying GetFeedback via Google Tag Manager (GTM) | Help Center</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <a href="../index.html" class="logo">GetFeedback</a>
+      <div class="search-box">
+        <input type="text" placeholder="Search help articles...">
+      </div>
+      <div class="nav-links">
+        <a href="../index.html">Help Center</a>
+        <a href="#">Documentation</a>
+        <a href="#">Support</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="../index.html">GetFeedback</a> / Deploying via Google Tag Manager
+  </div>
+
+  <div class="main-wrapper">
+    <main class="main-content">
+      <div class="article-meta">Last updated: May 28, 2026</div>
+      <h1>Deploying GetFeedback via Google Tag Manager (GTM)</h1>
+      <p class="article-intro">If your marketing or analytics teams use Google Tag Manager (GTM) to govern third-party script architectures, you can deploy the core GetFeedback script container across your entire domain in just a few clicks without manual engineering cycles.</p>
+
+      <h2 id="gtm-installation">Step-by-Step GTM Container Deployment</h2>
+      <p>Before beginning, log into your platform dashboard, access the <strong>Install</strong> tab of your active project, and copy your unique JavaScript snippet container. Then, follow these steps inside your GTM workspace:</p>
+
+      <h3>Step 1: Create a New Tag</h3>
+      <ol>
+        <li>Access your Google Tag Manager workspace dashboard and select your target tracking container.</li>
+        <li>From the left navigation options or the main overview panel, click <strong>Add a new tag</strong>.</li>
+        <li>Assign your tag a clear structural name (e.g., <code>"GetFeedback - Main Script Container"</code>).</li>
+      </ol>
+
+      <h3>Step 2: Configure Tag Properties</h3>
+      <ol>
+        <li>Click inside the central <strong>Tag Configuration</strong> block box to open the template selection slide-out menu.</li>
+        <li>Scroll through the default configurations or use the search field to select <strong>Custom HTML</strong>.</li>
+        <li>Paste the global script block snippet you copied from your GetFeedback builder directly into the HTML text area field.</li>
+        <li><strong>Crucial Setting:</strong> Ensure that the <em>"Support document.write"</em> check box underneath the code area remains <strong>unchecked</strong> to prevent runtime performance conflicts.</li>
+      </ol>
+
+      <h3>Step 3: Establish the Global Trigger Rule</h3>
+      <ol>
+        <li>Click directly into the lower <strong>Triggering</strong> options card configuration area.</li>
+        <li>Select the default <strong>All Pages (Page View)</strong> conditional firing trigger option. This ensures your active components (like passive feedback buttons or contextually targeted forms) can look for matching page criteria anywhere on your domain.</li>
+      </ol>
+
+      <h3>Step 4: Save, Review, and Publish</h3>
+      <ol>
+        <li>Click the blue <strong>Save</strong> button in the top right-hand corner of your setup panel frame interface.</li>
+        <li>Click <strong>Submit</strong> on your master workspace container timeline block.</li>
+        <li>Provide an optional version name noting the tag addition, and click <strong>Publish</strong> to push the deployment configurations straight to live production traffic.</li>
+      </ol>
+
+      <h2 id="verifying">Verifying Your GTM Deployment</h2>
+      <p>Once GTM has finished publishing your container tags, you can confirm that the container script is actively communicating with your domain:</p>
+      <ol>
+        <li>Load your live website page viewport and open your browser's developer console interface (typically by hitting <strong>F12</strong> or right-clicking and choosing <strong>Inspect Element -> Console</strong>).</li>
+        <li>Type the terminal test execution command <code>usabilla_live</code> and strike <strong>Enter</strong>.</li>
+        <li>If the tag has triggered flawlessly through GTM, the system will instantly return an instantiated background object function code footprint on the grid line interface.</li>
+      </ol>
+
+      <div class="pro-tip">
+        <strong>Next Step:</strong> Now that your global GTM snippet container is live, return to your preferred campaign guide to build out custom logic: choose either the <a href="feedback-button.html">Feedback Button Setup</a>, <a href="web-campaigns.html">Trigger-based Forms Guide</a>, or <a href="embedded-survey.html">Embedded Surveys Workflow</a>.
+      </div>
+    </main>
+
+    <aside class="article-sidebar">
+      <div class="sidebar-section">
+        <div class="sidebar-title">In This Article</div>
+        <ul class="article-sidebar-links">
+          <li><a href="#gtm-installation">GTM Container Deployment</a></li>
+          <li><a href="#verifying">Verifying GTM Deployment</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-section">
+        <div class="sidebar-title">Related Setup Guides</div>
+        <ul class="article-sidebar-links">
+          <li><a href="feedback-button.html">Feedback Button Setup</a></li>
+          <li><a href="web-campaigns.html">Trigger-based Forms</a></li>
+          <li><a href="embedded-survey.html">Embedded Survey Layouts</a></li>
+          <li><a href="csp-configuration.html">CSP Configuration Matrix</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    &copy; 2026 GetFeedback. All rights reserved.
+  </footer>
+  <script src="../assets/script.js"></script>
+</body>
+</html>
