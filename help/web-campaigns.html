@@ -32,7 +32,7 @@
       <p class="article-intro">Trigger-based forms are behavior-based forms that appear automatically when a visitor meets specific criteria. Unlike the standard "Always-on" Feedback Button, these forms are standalone and do not require a visible button to exist on the page.</p>
 
       <h2 id="survey-type">1. Choosing Your Survey Type</h2>
-      <p>To begin, from any section of the dashboard, click the <strong>Create</strong> button on the right hand side of the page header. An overlay wizard modal titled <em>"How should feedback appear?"</em> will pop up on your screen.</p>
+      <p>To begin, from any section of the dashboard, click the <strong>Create survey</strong> button on the right hand side of the page header. An overlay wizard modal titled <em>"How should feedback appear?"</em> will pop up on your screen.</p>
       <p>Select the <strong>Trigger-based form</strong> selection option asset from here, and click <strong>Continue</strong>. From there, select your required core layout format tile profile: choose either the subtle <strong>Slide-out</strong> survey card frame or the high-impact <strong>Full-screen</strong> design layout module before advancing straight into your editing canvas workspace environment.</p>
       <ul>
         <li><strong>Slide-out Survey:</strong> A subtle widget that slides in from the edge of the screen—good for quick check-ins without interrupting the user journey.</li>
@@ -77,6 +77,17 @@
         <li><strong>Device Type:</strong> Limits form delivery to audiences using a specific hardware profile (such as mobile devices or desktop displays).</li>
       </ul>
 
+      <h2 id="spa">Technical Note: Single Page Applications (SPA)</h2>
+      <p>Modern fluid websites engineered on modern frontend routing stacks (like React, Angular, or Vue framework layers) do not fire native global browser document hard-refreshes when a user switches between path views. For Trigger-based forms, our code snippet checks targeting rules (like URL matches) on the initial page load, so you must simulate a page refresh when a "virtual" page change occurs.</p>
+
+      <h3>The virtual_pageview Command</h3>
+      <p>Add the following JavaScript call to your application's router or navigation logic to run every time the path modifications update:</p>
+      <code style="display: block; background: #f5f5f5; padding: 12px; border-radius: 4px; overflow-x: auto; margin-bottom: 12px;">window.usabilla_live('virtual_pageview');</code>
+      <ul>
+        <li><strong>Refreshes Targeting:</strong> It tells the script to re-check if a Trigger-based form should show on the new URL parameters.</li>
+        <li><strong>Data Accuracy:</strong> It ensures your analytics and behavioural triggers (like Time on Page) reset correctly for the new view layout.</li>
+      </ul>
+
       <h2 id="scheduling">4. Scheduling & Fatigue Management</h2>
       <p>Within <strong>Launch</strong> the next option you will see is <strong>Schedule</strong>. This allows you to control the campaign lifecycle:</p>
       <ul>
@@ -87,12 +98,23 @@
       </ul>
 
       <h2 id="installation">5. Installation</h2>
-      <p>Once you have saved your form and options you will be brought to the <strong>Install</strong> page. Here you can find the installation instructions for you form:</p>
-      <ul>
-        <li><strong>The Snippet:</strong> Copy the unique JavaScript code and paste it into the global footer of your website. You will only need to install this on your site once, and it will allow the triggering of all of your Campaigns across your site.</li>
-        <li><strong>CSP (Content Security Policy):</strong> If your site is highly secure, use the <strong>Include CSP Hash</strong> option in the Install tab to get the specific hashes required for your script-src and style-src headers. Learn more in our <a href="csp-configuration.html">CSP Configuration guide</a>.</li>
-        <li><strong>Full-Page URL:</strong> If using the Full-screen format, you will also be provided with a direct Survey URL. This can be used as a standalone link in marketing emails or support signatures.</li>
-      </ul>
+      <p>Once you have saved your form and options you will be brought to the <strong>Install</strong> page view. To start collecting behavioral insights, you need to deploy the GetFeedback JavaScript snippet onto your website. This snippet acts as a "container" code—once it is active on your site, you can launch, edit, or disable campaigns directly from your dashboard without ever having to touch your website's code again.</p>
+
+      <h3>Manual Installation (Directly in HTML)</h3>
+      <p>If your team handles source tracking parameters manually inside your codebase repositories, follow these installation rules:</p>
+      <ol>
+        <li>From the final tab of the builder, click the <strong>View code</strong> control to open the tracking overlay panel modal. Use the quick-action options to copy your unique snippet string.</li>
+        <li>Open your website's global header template or master layout page markup file.</li>
+        <li>Paste the copied snippet into the document's tracking layout blocks, ensuring it resides within the <code>&lt;body&gt;</code> tags.</li>
+        <li><strong>Placement Tip:</strong> For the best performance, place the container code right before the closing <code>&lt;/body&gt;</code> tag on every page where targeting conditions are monitored.</li>
+        <li><strong>Content Security Policy (CSP) Notice:</strong> If your infrastructure runs strict security profiles, toggle the <strong>Include CSP Hash</strong> controls directly inside this script code modal to pull down your required cryptographic tags. For full tracking rules documentation, please review our comprehensive <a href="csp-configuration.html">Configuring Content Security Policy (CSP) guide</a>.</li>
+      </ol>
+      <p class="pro-tip" style="margin-top: 16px;">
+        <strong>Tip:</strong> You can also deploy and manage your tracking code snippet scripts via Google Tag Manager, please see our dedicated <a href="google-tag-manager.html">Google Tag Manager installation guide here</a>!
+      </p>
+
+      <h3>Full-Page URL Options</h3>
+      <p>If you configured your campaign using the high-impact Full-screen layout profile, you will also be supplied with a unique standalone Survey URL from this view. This parameter can be used outside of your main domain space as a direct hyper-link asset inside outbound transactional emails or customer service signatures.</p>
 
       <h2 id="pro-tips">Pro-Tips for Success</h2>
       <ul>
@@ -112,9 +134,10 @@
         <ul class="article-sidebar-links">
           <li><a href="#survey-type">Choosing Your Survey Type</a></li>
           <li><a href="#building">Building the Survey</a></li>
-          <li><a href="#targeting">Targeting</a></li>
+          <li><a href="#targeting">Targeting Rules</a></li>
+          <li><a href="#spa">SPA Support</a></li>
           <li><a href="#scheduling">Scheduling</a></li>
-          <li><a href="#installation">Installation</a></li>
+          <li><a href="#installation">Installation Setup</a></li>
           <li><a href="#pro-tips">Pro-Tips</a></li>
         </ul>
       </div>
@@ -124,7 +147,6 @@
           <li><a href="web-campaigns-targeting.html">Web Survey Targeting</a></li>
           <li><a href="analyse-results.html">Analyse Your Results</a></li>
           <li><a href="csp-configuration.html">CSP Configuration</a></li>
-          <li>Custom Variables</li>
         </ul>
       </div>
     </aside>
