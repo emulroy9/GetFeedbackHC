@@ -75,13 +75,15 @@
       </ul>
 
       <h2 id="install">Step 4: Install Your Button</h2>
-      <p>Clicking the final phase control moves your workspace frame into the terminal <strong>Install</strong> tab view to complete the site deployment sequence.</p>
+      <p>Clicking the final phase control moves your workspace frame into the terminal <strong>Install</strong> tab view. To start collecting insights, you need to deploy the GetFeedback JavaScript snippet onto your website. This snippet acts as a "container" code—once it is active on your site, you can launch, edit, or disable buttons and surveys directly from your dashboard without ever having to modify your website's source code again.</p>
 
-      <h3>1. Code Snippet Copy and Placement</h3>
-      <p>Click the <strong>View code</strong> or <strong>Copy code</strong> controls to capture the underlying platform embedding script module. Paste this compiled markup string straight into your master application layout templates, placing it immediately preceding the terminal closing <code>&lt;/body&gt;</code> tag on pages where tracking is required.</p>
-
-      <h3>2. Content Security Policy (CSP) Configurations</h3>
-      <p>If your web layout platform operates under tight server restrictions, click the <strong>Include CSP Hash</strong> link on the modal panel code frame to access your deployment properties. You must copy these specific hash properties directly into your page headers.</p>
+      <h3>Manual Installation (Directly in HTML)</h3>
+      <p>If you have direct access to your website's source code, follow these steps to place the snippet manually:</p>
+      <ol>
+        <li>From the final step of the builder, click the <strong>View code</strong> control to open the installation modal panel overlay. Here you will find your unique JavaScript snippet string alongside your quick-copy utility controls.</li>
+        <li>Paste the copied snippet into the <code>&lt;body&gt;</code> section of your page. For the best performance, place the code right before the closing <code>&lt;/body&gt;</code> tag on every page where you want the feedback button to render.</li>
+        <li><strong>Content Security Policy (CSP) Notice:</strong> If your web hosting architecture enforces rigid security rules, check the <strong>Include CSP Hash</strong> options directly inside this modal panel layout frame to retrieve your cryptographic properties. For comprehensive step-by-step allowlisting instructions, please review our dedicated <a href="csp-configuration.html">Configuring Content Security Policy (CSP) guide</a>.</li>
+      </ol>
 
       <h2 id="preview">Pro-Tip: Live Preview Verification</h2>
       <p>Before closing out your production setup, use the interactive preview container displayed directly on the Install setup tab. Click the rendered floating tab component layout directly within the preview frame to step through your entire responsive visual selection grid and ensure your data capture cells function properly before finalizing deployment.</p>
